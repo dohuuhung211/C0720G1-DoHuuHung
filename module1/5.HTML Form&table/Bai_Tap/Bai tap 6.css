@@ -1,0 +1,21 @@
+body{
+    font-size: 18px;
+}
+table{
+    text-align: center;
+    width: 600px;
+}
+h2{
+    margin-left: 200px;
+    color: blue;
+}
+tr, td{
+    width: 60px;
+    height: 40px;
+}
+#vang{
+    background-color: #ffd851;
+}
+#do{color: red;}
+#xanh{
+    color: blue;

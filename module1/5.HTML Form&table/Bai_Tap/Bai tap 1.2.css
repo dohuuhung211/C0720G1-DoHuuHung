@@ -1,0 +1,40 @@
+
+form {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    line-height: 30px;
+    background-color: aqua;
+}
+textarea{float: right;
+}
+select{
+    float: right;
+    margin-right: 160px;
+    margin-top: 5px;
+}
+input[type=text]{
+    float: right;
+    margin-right: 100px;
+    margin-top: 5px;
+}
+table{
+    width: 400px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+input[type=number] {
+    float: right;
+    margin-right: 100px;
+    margin-top: 5px;
+}
+td{
+    text-align: center;
+}
+input[type=submit], input[type=reset]{
+    float: left;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+

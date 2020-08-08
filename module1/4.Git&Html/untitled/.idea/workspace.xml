@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b1ac9876-df65-4baa-a1ba-77d0689103a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Thuc_Hanh/TH2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../5.HTML Form&amp;table/Bai_Tap/Text.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="G:\C0720G1_Do_Huu_Hung\module1\4.Git&amp;Html\untitled\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fj8MX4yoAqxsoQwnfgnhlK2fSo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../5.HTML Form&amp;table/Thuc_Hanh" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\C0720G1_Do_Huu_Hung\module1\5.HTML Form&amp;table\Thuc_Hanh" />
+      <recent name="G:\C0720G1_Do_Huu_Hung\module1\5.HTML Form&amp;table\Bai_Tap" />
+      <recent name="G:\C0720G1_Do_Huu_Hung\module1\4.Git&amp;Html\Thuc_Hanh" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1ac9876-df65-4baa-a1ba-77d0689103a1" name="Default Changelist" comment="" />
+      <created>1596720093840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596720093840</updated>
+      <workItem from="1596720095235" duration="5459000" />
+      <workItem from="1596725995558" duration="104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="561" y="155" key="FileChooserDialogImpl" timestamp="1596726094066">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="561" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596726094066" />
+    <state x="443" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596725767450">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="443" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596725767450" />
+  </component>
+</project>

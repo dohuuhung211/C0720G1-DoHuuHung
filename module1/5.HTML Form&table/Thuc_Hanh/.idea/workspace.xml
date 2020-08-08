@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a63f55ea-d2fb-415d-bd4d-99f588219a19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../4.Git&amp;Html/Thuc_Hanh/TH2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bai_Tap/Text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TH form 1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4.Git&amp;Html/Thuc_Hanh/TH2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596726100750</updated>
       <workItem from="1596726102067" duration="335000" />
+      <workItem from="1596878382132" duration="470000" />
     </task>
     <servers />
   </component>

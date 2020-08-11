@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 200px;
+        }
+        button{
+            width: 110px;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="left" value="input1">
+    <input type="number" id="right" value="input2"><br><br>
+    <button type="button" value="Addition" onclick="add()">Addition(+)</button>
+    <button type="button" value="Subtraction" onclick="Sub()">Subtraction(-)</button>
+    <button type="button" value="Multiplication" onclick="Mul()">Multiplication(*)</button>
+    <button type="button" value="Division" onclick="Div()">Division(/)</button>
+    <p id="result"></p>
+    <script>
+        function add() {
+            let a = document.getElementById('left').value;
+            let b = document.getElementById('right').value;
+            a = parseInt(a);
+            b = parseInt(b);
+            total = a + b;
+            document.getElementById('result').innerHTML = 'Ket qua la ' + total;
+        }
+        function Sub() {
+            let a = document.getElementById('left').value;
+            let b = document.getElementById('right').value;
+            a = parseInt(a);
+            b = parseInt(b);
+            total = a - b;
+            document.getElementById('result').innerHTML = 'Ket qua la ' + total;
+        }
+        function Mul() {
+            let a = document.getElementById('left').value;
+            let b = document.getElementById('right').value;
+            a = parseInt(a);
+            b = parseInt(b);
+            total = a * b;
+            document.getElementById('result').innerHTML = 'Ket qua la ' + total;
+        }
+        function Div() {
+            let a = document.getElementById('left').value;
+            let b = document.getElementById('right').value;
+            a = parseInt(a);
+            b = parseInt(b);
+            total = a / b;
+            document.getElementById('result').innerHTML = 'Ket qua la ' + total;
+        }
+    </script>
+
+</body>
+</html>

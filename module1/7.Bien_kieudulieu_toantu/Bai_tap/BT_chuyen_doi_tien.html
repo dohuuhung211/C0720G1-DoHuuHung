@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="BT2.js"></script>
+</head>
+<body>
+    <table cellspacing="20px">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input id="amount" type="number">
+            </td>
+            <td>
+                <select id="from">
+                    <option value="VND">Việt Nam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">Việt Nam</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" value="Convert" onclick="convert()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result"></p>
+    <script>
+        function convert() {
+            let num = document.getElementById('amount').value;
+            num = parseFloat(num);
+            let from = document.getElementById('from').value;
+            let to = document.getElementById('to').value;
+            if (from === "VND" && to === "USD"){
+                result = num / 23000;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if (from === "USD" && to ==="VND"){
+                result = num * 23000;
+                document.getElementById('result').innerHTML = result;
+            }
+            else {
+                alert('Vui long kiem tra lai');
+            }
+        }
+
+    </script>
+</body>
+</html>

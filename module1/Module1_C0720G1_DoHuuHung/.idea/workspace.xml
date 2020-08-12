@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="" />
+    <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../8.Cau_truc_dieu_kien/Thuc_hanh/4.3_Luyen_tap_SWITCH-CASE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../8.Cau_truc_dieu_kien/Thuc_hanh/5.2Luyen_tap_toan_tu_3_ngoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8.Cau_truc_dieu_kien/Thuc_hanh/4.2Luyen_tap_SWITCH-CASE.html" beforeDir="false" afterPath="$PROJECT_DIR$/../8.Cau_truc_dieu_kien/Thuc_hanh/4.2Luyen_tap_SWITCH-CASE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy1.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy1.js" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy1.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +19,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1fxIJEahdyT5nSmRfw5yIhkg9cT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +37,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -37,10 +52,19 @@
       <option name="presentableId" value="Default" />
       <updated>1597153242710</updated>
       <workItem from="1597153244094" duration="2376000" />
+      <workItem from="1597228321255" duration="4392000" />
+      <workItem from="1597232831847" duration="1855000" />
+      <workItem from="1597236593399" duration="465000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597232749742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597232749742" />
   </component>
 </project>

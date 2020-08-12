@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="ngaythue"></p>
+    <p id="loaidichvu"></p>
+    <p id="tongtien"></p>
+    <script>
+        let rentDays = parseInt(prompt("Số ngày thuê:"));
+        let service = parseInt(prompt("Loại dịch vụ: Villa (500$/ngày), House (300$/ngày), Room (100$/ngày)"));
+        document.getElementById("ngaythue").innerHTML = "Số ngày thuê: " + rentDays;
+        document.getElementById("loaidichvu").innerHTML = "Loại dịch vụ: " + service;
+        let total = service * rentDays * (1 - 20/100);
+        document.getElementById("tongtien").innerText = "Tổng tiền là: " + total;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="namnhuan"></p>
+    <script>
+        let year = parseInt(prompt("Nhập năm:"));
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + " la nam nhuan");
+                }
+                else {
+                    alert(year + " khong phai nam nhuan");
+                }
+            } else {
+                alert(year + " la nam nhuan");
+            }
+        } else {
+            alert(year + " ko phai nam nhuan");
+        }
+    </script>
+</body>
+</html>

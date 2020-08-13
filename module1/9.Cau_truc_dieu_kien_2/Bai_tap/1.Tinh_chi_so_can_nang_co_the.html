@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th{
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <table cellspacing="10px">
+        <tr>
+            <th>Nhập cân nặng</th>
+            <th>Nhập chiều cao</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="cannang" value=""> Kg
+            </td>
+            <td>
+                <input type="text" id="chieucao" value=""> (VD: 1.75)
+            </td>
+            <td>
+                <button type="button" value="click" onclick="hienthi();">Result</button>
+            </td>
+        </tr>
+            <p id="result"></p>
+            <p id="ketqua"></p>
+    </table>
+    <script>
+        function hienthi() {
+            let weight = parseFloat(document.getElementById("cannang").value);
+            let height = parseFloat(document.getElementById("chieucao").value);
+            let bmi = weight / (height ^ 2);
+            document.getElementById("result").innerHTML = "Bmi cua ban la: " + bmi;
+            if (bmi < 18) {
+                document.getElementById("ketqua").innerHTML = "Thiếu cân";
+            } else if (bmi < 25){
+                document.getElementById("ketqua").innerHTML = "Bình thường";
+            } else if (bmi < 30) {
+                document.getElementById("ketqua").innerHTML = "Thừa cân";
+            } else {
+                document.getElementById("ketqua").innerHTML = "Béo phì";
+            }
+        }
+    </script>
+</body>
+</html>

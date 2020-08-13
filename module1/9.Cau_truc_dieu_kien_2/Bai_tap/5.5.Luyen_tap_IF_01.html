@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let diemKT = parseFloat(prompt("Nhập điểm kiểm tra"));
+        let diemGiuaKy = parseFloat(prompt("Nhập điểm giữa kỳ"));
+        let diemCuoiky = parseFloat(prompt("Nhập điểm cuối kỳ"));
+        total = (diemKT + diemGiuaKy + diemCuoiky) / 3;
+        if (total >= 9) {
+            alert("Điểm trung bình " + total + ":" + " Học sinh xuất sắc");
+        } else if (total >= 8) {
+            alert("Điểm trung bình " + total + ":"  + " Học sinh giỏi");
+        } else if (total >= 6.5) {
+            alert("Điểm trung bình " + total + ":"  + " Học sinh khá");
+        } else if (total >= 5) {
+            alert("Điểm trung bình " + total + ":"  + " Học sinh trung bình");
+        } else if (total >= 3.5) {
+            alert("Điểm trung bình " + total + ":"  + " Học sinh yếu");
+        } else {
+            alert("Điểm trung bình " + total + ":"  + " Học sinh kém");
+        }
+    </script>
+</body>
+</html>

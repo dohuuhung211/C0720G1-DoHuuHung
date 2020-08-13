@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{width: 60px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <table cellspacing="20px" border="1">
+        <input type="text" name="actiont" id="action" value="" style="width: 350px; height: 30px;">
+        <tr>
+            <td><input type="button" value="1" onclick="clickNum1()"></td>
+            <td><input type="button" value="2" onclick="clickNum2()"></td>
+            <td><input type="button" value="3" onclick="clickNum3()"></td>
+            <td><input type="button" value="+" onclick="clickCong()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="clickNum4()"></td>
+            <td><input type="button" value="5" onclick="clickNum5()"></td>
+            <td><input type="button" value="6" onclick="clickNum6()"></td>
+            <td><input type="button" value="-" onclick="clickTru()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="clickNum7()"></td>
+            <td><input type="button" value="8" onclick="clickNum8()"></td>
+            <td><input type="button" value="9" onclick="clickNum9()"></td>
+            <td><input type="button" value="*" onclick="clickNhan()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="clickClear()"></td>
+            <td><input type="button" value="0" onclick="clickNum0()"></td>
+            <td><input type="button" value="=" onclick="ketQua()"></td>
+            <td><input type="button" value="/" onclick="clickChia()"></td>
+        </tr>
+    </table>
+    <script>
+        function clickNum1() {
+            document.getElementById("action").value +=1;
+        }
+        function clickNum2() {
+            document.getElementById("action").value +=2;
+        }
+        function clickNum3() {
+            document.getElementById("action").value +=3;
+        }
+        function clickNum4() {
+            document.getElementById("action").value +=4;
+        }
+        function clickNum5() {
+            document.getElementById("action").value +=5;
+        }
+        function clickNum6() {
+            document.getElementById("action").value +=6;
+        }
+        function clickNum7() {
+            document.getElementById("action").value +=7;
+        }
+        function clickNum8() {
+            document.getElementById("action").value +=8;
+        }
+        function clickNum9() {
+            document.getElementById("action").value +=9;
+        }
+        function clickClear() {
+            document.getElementById("action").value ="";
+        }
+        function clickNum0() {
+            document.getElementById("action").value +=0;
+        }
+        function clickCong() {
+            document.getElementById("action").value +="+";
+        }
+        function clickTru() {
+            document.getElementById("action").value +="-";
+        }
+        function clickNhan() {
+            document.getElementById("action").value +="*";
+        }
+        function clickChia() {
+            document.getElementById("action").value +="/";
+        }
+        function ketQua() {
+            let string = document.getElementById("action").value;
+            result = eval(string);
+            document.getElementById("action").value = result;
+        }
+
+
+
+    </script>
+</body>
+</html>

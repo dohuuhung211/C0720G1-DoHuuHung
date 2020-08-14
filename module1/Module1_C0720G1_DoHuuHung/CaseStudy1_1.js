@@ -1,5 +1,5 @@
 let name = prompt("Mời quý khách nhập tên:");
-let cmnd = prompt("Số chứng minh thư:");
+let idCard = prompt("Số chứng minh thư:");
 let dayOfBirth = prompt("Sinh ngày:");
 let Email = prompt("Email:");
 let address = prompt("Địa chỉ:");
@@ -11,7 +11,7 @@ let service = parseInt(prompt("Loại dịch vụ: Villa (500$/ngày), House (30
 let kindOfRoom= prompt("Loại phòng thuê: (Vip, Business, Normal)");
 alert("thông tin quý khách đã được nhận.");
 document.getElementById("ten").innerHTML = "Họ và tên: " +  name;
-document.getElementById("socmnd").innerHTML = "Số CMND: " + cmnd;
+document.getElementById("socmnd").innerHTML = "Số CMND: " + idCard;
 document.getElementById("ngaysinh").innerHTML = "Ngày sinh: " + dayOfBirth;
 document.getElementById("email").innerHTML = "Email: " + Email;
 document.getElementById("diachi").innerHTML = "Địa chỉ: " + address;

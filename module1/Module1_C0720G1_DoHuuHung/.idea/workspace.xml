@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/1.Tinh_chi_so_can_nang_co_the.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/2.Cau_lenh_SWITCH_CASE.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/3.May_tinh_don_gian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/4.Ung_dung_vui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/5.1.Luyen_tap_IF_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/5.2.Luyen_tap_IF_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/5.3.Luyen_tap_IF_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/5.4.Luyen_tap_IF_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/5.5.Luyen_tap_IF_01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/6.1.Luyen_tap_IF_02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/6.2.Luyen_tap_IF_02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/6.3.Luyen_tap_IF_02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/6.4.Luyen_tap_IF_02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Bai_tap/6.5.Luyen_tap_IF_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy1.js" beforeDir="false" />
-    </list>
+    <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../9.Cau_truc_dieu_kien_2/Thuc_hanh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,6 +48,7 @@
       <workItem from="1597236593399" duration="465000" />
       <workItem from="1597283831001" duration="389000" />
       <workItem from="1597328267160" duration="2388000" />
+      <workItem from="1597368284277" duration="44000" />
     </task>
     <servers />
   </component>
@@ -73,9 +56,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597284221083">
+    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597368326782">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597284221083" />
+    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597368326782" />
   </component>
 </project>

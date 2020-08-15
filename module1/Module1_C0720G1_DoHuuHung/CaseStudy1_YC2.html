@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let choose = parseInt(prompt("1. Hiển thị thông tin khách hàng. \n2. Chỉnh sửa thông tin. \n3. Hiển thị đơn giá sau khi giảm."));
+        let name = "Đỗ Hữu Hưng";
+        let idCard = "201666888";
+        let dayOfBirth = "22/11/1995";
+        let email = "hungdhpd01429@gmail.com";
+        let address = "137 Bình Thái 1, Đà Nẵng";
+        let customerType = "Diamond";
+        let discount = "20%";
+        let soLuongKhach = "6";
+        let rentDays = "7 ngày";
+        let service = "Villa (500$/Ngày)";
+        let typeRoom = "Business";
+        switch (choose) {
+            case 1:
+                alert("1.Họ và tên: " + name + "\n" +
+                    "2. Chứng minh nhân dân: " + idCard + "\n" +
+                    "3. Ngày sinh: " + dayOfBirth + "\n" +
+                    "4. Email: " + email + "\n" +
+                    "5. Địa chỉ: " + address + "\n" +
+                    "6. Loại khách hàng: " + customerType + "\n" +
+                    "7. Giảm giá: " + discount + "\n" +
+                    "8. Số lượng khách: " + soLuongKhach + "\n" +
+                    "9. Số ngày thuê: " + rentDays + "\n" +
+                    "10. Loại dịch vụ: " + service + "\n" +
+                    "11. Loại phòng thuê: " + typeRoom);
+                break;
+            case 2:
+                let = edit = parseInt(prompt("1. Họ và tên: " + name + "\n2. CMND: " + idCard + "\n3. Ngày Sinh: " + dayOfBirth
+                    + "\n4. Email: " + email + "\n5. Địa chỉ: " + address + "\n6. Loại khách hàng: " + customerType + "\n7. Giảm giác: 20%"
+                    + "\n8. Số lượng khách hàng: " + soLuongKhach + "\n9. Số ngày thuê: " + rentDays + "\n10. Loại dịch vụ: " + service
+                    + "\n11. Loại phòng thuê: " + typeRoom));
+                switch (edit) {
+                    case 1: {
+                        name = prompt("Họ và tên: ");
+                        break;
+                    }
+                    case 2: {
+                        idCard = prompt("Chứng minh nhân dân:");
+                        break;
+                    }
+                    case 3: {
+                        dayOfBirth = prompt("Ngày sinh:");
+                        break;
+                    }
+                    case 4: {
+                        email = prompt("Email: ");
+                        break;
+                    }
+                    case 5: {
+                        address = prompt("Địa chỉ:");
+                        break;
+                    }
+                    case 6: {
+                        customerType = prompt("Loại khách hàng: ");
+                        break
+                    }
+                    case 7: {
+                        discount = parseInt(prompt("Giảm giá:"));
+                        break;
+                    }
+                    case 8: {
+                        soLuongKhach = prompt("Số lượng khách:");
+                        break;
+                    }
+                    case 9: {
+                        rentDays = parseInt(prompt("Số ngày thuê:"));
+                        break;
+                    }
+                    case 10: {
+                        service = parseFloat(prompt("Loại dịch vụ:"));
+
+                        break;
+                    }
+                    case 11: {
+                        typeRoom = prompt("Loại phòng thuê:");
+                        break;
+                    }
+                    default: {
+                        alert("Failed");
+                    }
+                }
+                alert("1.Họ và tên: " + name + "\n" +
+                    "2. Chứng minh nhân dân: " + idCard + "\n" +
+                    "3. Ngày sinh: " + dayOfBirth + "\n" +
+                    "4. Email: " + email + "\n" +
+                    "5. Địa chỉ: " + address + "\n" +
+                    "6. Loại khách hàng: " + customerType + "\n" +
+                    "7. Giảm giá: " + discount + "\n" +
+                    "8. Số lượng khách: " + soLuongKhach + "\n" +
+                    "9. Số ngày thuê: " + rentDays + "\n" +
+                    "10. Loại dịch vụ: " + service + "\n" +
+                    "11. Loại phòng thuê: " + typeRoom);
+                    break;
+            case 3: {
+                total = 500 * 7 * (1 - 20/100);
+                alert("Giá sau khi giảm là: " + total);
+                break;
+            }
+            default: {
+                alert("Số không có trong danh sách, mời nhập lại.");
+            }
+        }
+    </script>
+</body>
+</html>

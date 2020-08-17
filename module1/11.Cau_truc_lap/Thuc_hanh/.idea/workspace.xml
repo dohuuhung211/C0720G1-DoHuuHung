@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c70efd8-dbc3-470f-a645-9481f85d8fa9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/1.Sinh_bang_cuu_chuong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/2.So_nguyen_to.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/3.2.Su_dung_vong_lap_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/3.3.Su_dung_vong_lap_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/3.6.Su_dung_vong_lap_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/3.7.Su_dung_vong_lap_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/3.8.Su_dung_vong_lap_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/4.2.Su_dung_vong_lap_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai_tap/4.3.In_tam_giac.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10.Cau_truc_lap/Thuc_hanh/1.2.Su_dung_vong_lap_for.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../10.Cau_truc_lap/Thuc_hanh/1.2.Su_dung_vong_lap_for.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10.Cau_truc_lap/Thuc_hanh/2.2.Su_dung_vong_lap_while.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../10.Cau_truc_lap/Thuc_hanh/2.2.Su_dung_vong_lap_while.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module1_C0720G1_DoHuuHung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module1_C0720G1_DoHuuHung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module1_C0720G1_DoHuuHung/CaseStudy1_YC2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module1_C0720G1_DoHuuHung/CaseStudy1_YC2.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1gEHiLOJP7AdBpefTN5i4iqHtst" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c70efd8-dbc3-470f-a645-9481f85d8fa9" name="Default Changelist" comment="" />
+      <created>1597672957036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597672957036</updated>
+      <workItem from="1597672958240" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="497" y="190" key="FileChooserDialogImpl" timestamp="1597672964243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="497" y="190" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597672964243" />
+  </component>
+</project>

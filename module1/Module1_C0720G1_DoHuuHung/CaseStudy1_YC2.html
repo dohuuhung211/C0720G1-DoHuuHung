@@ -14,8 +14,8 @@
         let address = "137 Bình Thái 1, Đà Nẵng";
         let customerType = "Diamond";
         let discount = "20%";
-        let soLuongKhach = "6";
-        let rentDays = "7 ngày";
+        let soLuongKhach = 6;
+        let rentDays = 7;
         let service = "Villa (500$/Ngày)";
         let typeRoom = "Business";
         switch (choose) {
@@ -63,7 +63,7 @@
                         break
                     }
                     case 7: {
-                        discount = parseInt(prompt("Giảm giá:"));
+                        discount = prompt("Giảm giá:");
                         break;
                     }
                     case 8: {
@@ -71,11 +71,11 @@
                         break;
                     }
                     case 9: {
-                        rentDays = parseInt(prompt("Số ngày thuê:"));
+                        rentDays = prompt("Số ngày thuê:");
                         break;
                     }
                     case 10: {
-                        service = parseFloat(prompt("Loại dịch vụ:"));
+                        service = prompt("Loại dịch vụ:");
 
                         break;
                     }
@@ -100,9 +100,46 @@
                     "11. Loại phòng thuê: " + typeRoom);
                     break;
             case 3: {
-                total = 500 * 7 * (1 - 20/100);
-                alert("Giá sau khi giảm là: " + total);
+                let pay = 0;
+                if (service === "Villa"){
+                    pay = 500 ;
+                } else if (service === "House"){
+                    pay = 300;
+                } else {
+                    pay = 100;
+                }
+
+                let temp = 0;
+                if (address === "Đà Nẵng"){
+                    temp += 20;
+                } else if (address === "Huế"){
+                    temp += 15;
+                } else if (address === "Quảng Nam"){
+                    temp += 5;
+                }
+
+                if (rentDays > 7){
+                    temp += 30;
+                } else if (rentDays >= 5){
+                    temp += 20;
+                } else if (rentDays > 2){
+                    temp += 10;
+                }
+
+                if (customerType === "Diamond"){
+                    temp += 15;
+                } else if (customerType === "Platinum"){
+                    temp += 10;
+                } else if (customerType === "Gold"){
+                    temp += 5;
+                } else if (customerType === "Silver"){
+                    temp += 2;
+                } else if (customerType === "Member"){
+                    temp += 0;
+                }
+                alert("Số tiền phải trả là: " + (pay * rentDays * (1 - temp/100)) + "$");
                 break;
+
             }
             default: {
                 alert("Số không có trong danh sách, mời nhập lại.");

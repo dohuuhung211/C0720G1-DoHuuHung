@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>GAME ĐOÁN SỐ</h1>
+    <button type="button" onclick="clickMe()">CLICK TO PLAY</button>
+    <script>
+        function clickMe() {
+            let fNum = parseInt(prompt("Số trong khoảng từ: "));
+            let eNum = parseInt(prompt("Số trong khoảng đến: "));
+            let ramdom = Math.ceil((eNum - fNum) * Math.random()) + fNum;
+            for (i = 1; i <= 3; i++){
+                let gNum = parseInt(prompt("Nhập số dự đoán"));
+                if (gNum == ramdom){
+                    alert("Bạn đã đoán đúng");
+                    break;
+                } else if (gNum < ramdom) {
+                    alert("Số dự đoán bé hơn kết quả, mời nhập lại");
+                } else {
+                    alert("Số dự đoán lớn hơn kết quả, mời nhập lại");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

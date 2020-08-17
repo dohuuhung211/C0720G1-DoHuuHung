@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test_cs2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11.Cau_truc_lap/Bai_tap/1.Sinh_bang_cuu_chuong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11.Cau_truc_lap/Bai_tap/2.So_nguyen_to.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../11.Cau_truc_lap/Bai_tap/3.2.Su_dung_vong_lap_01.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS2.html" beforeDir="false" afterPath="$PROJECT_DIR$/CS2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy1_YC2.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy1_YC2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../11.Cau_truc_lap/Bai_tap" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -54,6 +56,8 @@
       <workItem from="1597328267160" duration="2388000" />
       <workItem from="1597368284277" duration="44000" />
       <workItem from="1597471948041" duration="7690000" />
+      <workItem from="1597495886208" duration="1606000" />
+      <workItem from="1597627196178" duration="1312000" />
     </task>
     <servers />
   </component>
@@ -61,9 +65,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597368326782">
+    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597628812275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597368326782" />
+    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597628812275" />
   </component>
 </project>

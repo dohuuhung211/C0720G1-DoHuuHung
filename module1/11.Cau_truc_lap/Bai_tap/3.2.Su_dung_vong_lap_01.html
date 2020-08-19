@@ -6,16 +6,17 @@
 </head>
 <body>
     <script>
-        let nhietDo = parseInt(prompt("Nhập nhiệt độ"));
-        if (nhietDo > 100){
-            alert("Bạn nên giảm nhiệt độ");
-        } else if (nhietDo < 20){
-            alert("Bạn nên tăng nhiệt độ");
-        } else {
-            alert("Nhiệt độ bình thường");
-        }
-
-
+        let nhietdo = prompt("Nhập nhiệt độ");
+        let check = true;
+        while (check)
+            if (nhietdo > 100){
+                nhietdo =prompt("hãy giảm nhiệt độ!");
+            } else if (nhietdo <20 ){
+                nhietdo =prompt("hãy tăng nhiệt độ!");
+            } else {
+                check=false;
+                alert("Nhiệt dộ của bạn hợp lý!");
+            }
     </script>
 </body>
 </html>

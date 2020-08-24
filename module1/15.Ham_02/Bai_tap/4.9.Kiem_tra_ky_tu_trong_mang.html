@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function check(array,char) {
+            let count = 0;
+            let text = "";
+            for (i = 0; i < array.length; i++) {
+                if (array[i] == char) {
+                    count++;
+                }
+            }
+            if (count != 0){
+                text = char + " thuộc mảng " + array + " và xuất hiện " + count + " lần";
+            } else {
+                text = char + " không có trong mảng " + count;
+            }
+            return text;
+        }
+        let array = ["a","a","a","b","b","c"];
+        let char = "c452217y";
+        alert(check(array,char));
+    </script>
+</body>
+</html>

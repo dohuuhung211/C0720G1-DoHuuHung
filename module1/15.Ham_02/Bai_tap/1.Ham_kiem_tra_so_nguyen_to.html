@@ -8,9 +8,9 @@
     <script>
         function kiemTra(n) {
             flag = true;
-            if (n < 2){
-                flag = false;
-            } else if (n == 2){
+            if (n == 2){
+                flag = true;
+            } else if (n < 2){
                 flag = false;
             } else if (n % 2 == 0){
                 flag = false;
@@ -23,11 +23,13 @@
                 }
             }
             if (flag == false){
-                document.write(n + " không phải là số nguyên tố");
+                alert(n + " không phải là số nguyên tố");
             } else {
-                document.write(n + "là số nguyên tố <br>");
+                alert(n + " là số nguyên tố");
             }
         }
+        let input = parseInt(prompt("Nhap so"));
+        kiemTra(input);
     </script>
 </body>
 </html>

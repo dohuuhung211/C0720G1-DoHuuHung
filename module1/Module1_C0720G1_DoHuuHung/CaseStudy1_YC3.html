@@ -36,9 +36,29 @@
             }
             check = true;
         } while (!check);
+        check = false;
+        do {
+            dayOfBirth = prompt("Ngày sinh:" );
+            if (dayOfBirth.charAt(2) === "/" && dayOfBirth.charAt(5) === "/"){
+                let day = dayOfBirth.substring(0,2);
+                let month = dayOfBirth.substring(3,5);
+                let year = dayOfBirth.substring(6,10);
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year)){
+                    day = Number.parseFloat(day);
+                    month = Number.parseFloat(month);
+                    year = Number.parseFloat(year);
+                    if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)){
+                        if (day < 32 && month < 13 && year > 1900){
+                            check = true;
+                        }
+                    }
+                }
+            }
+            if (!check){
+                alert("Ngày sinh chưa đúng");
+            }
+        } while (!check);
 
-
-        dayOfBirth = prompt("Ngày sinh:" );
         do {
             email = prompt("Email: ");
             countAt = 0;
@@ -60,13 +80,41 @@
             }
         } while (!check);
         check = false;
+
         address = prompt("Địa chỉ: ");
         service = prompt("Loại dịch vụ: ");
         typeRoom = prompt("Loại phòng thuê: ");
         customerType = prompt("Loại khách hàng: ");
-        soLuongKhach = prompt("Số lượng khách: ")
+
+        do {
+            soLuongKhach = prompt("Số lượng khách: ");
+            if (!isNaN(soLuongKhach)){
+                soLuongKhach = Number.parseFloat(soLuongKhach);
+                if (Number.isInteger(soLuongKhach)){
+                    check = true;
+                }
+            }
+            if (!check){
+                alert("Vui lòng nhập đúng số lượng")
+            }
+        } while (!check);
+        check = false;
+
         discount = prompt("Giảm giá: ");
-        rentDays = prompt("Số ngày thuê: ");
+
+        do {
+            rentDays = prompt("Số ngày thuê: ");
+            if (!isNaN(rentDays)){
+                rentDays = Number.parseFloat(rentDays);
+                if (Number.isInteger(rentDays)){
+                    check = true;
+                }
+            }
+            if (!check){
+                alert("Mời nhập đúng số ngày");
+            }
+        } while (!check);
+        check = false;
 
     </script>
 </body>

@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tìm giá trị lơn nhất và tính giá trị trung bình</title>
 </head>
 <body>
-    <script>
-    let x = [5,34,53,5,7,2,9,24];
-    document.write(x + "<br>");
-    let max = Math.max.apply(Math, x);
-    document.write("Giá trị lớn nhất của mảng: " + max + "<br>");
-    tong = 0; let tb = "";
-    for (i = 0; i < x.length; i++) {
-        tong += x[i];
+<script>
+    let array = [1,2,3,12,34,5,11,8,9,3];
+    let sum = 0;
+    let max = array[0];
+    for (let i = 0; i < array.length; i++){
+        sum += array[i];
+        if (array[i] > max){
+            max = array[i];
+        }
     }
-    tb = tong / x.length;
-    document.write("Giá trị trung bình của mảng: " + tb);
-    </script
+    alert("Phần tử lớn nhất trong mảng " + array+ " là: " + max +" và giá trị trung bình là là: "+sum/array.length);
+</script>
 </body>
 </html>

@@ -5,12 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        let x = [5,2,4,76,54,35,900,54,6,7];
-        document.write(x + "<br>");
-        let max = Math.max.apply(Math, x);
-        document.write("Số lớn nhất là: " + max + "<br>");
-        document.write("Vị trí thứ: " + x.indexOf(max));
-    </script>
+<script>
+    let array = [5,2,4,76,54,35,900,54,6,7];
+    let max = array[0];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] > max){
+            max = array[i];
+        }
+    }
+    alert("Giá trị lớn nhất trong mảng " + array + " là " + max);
+</script>
 </body>
 </html>

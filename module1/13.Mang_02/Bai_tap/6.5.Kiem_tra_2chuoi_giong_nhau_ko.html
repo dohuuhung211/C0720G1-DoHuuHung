@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let x = prompt("nhập 1"); // abcd
+        let y = prompt("nhập 2"); // aced
+        let result = "";
+        if (x.length === y.length){
+            for (i = 0; i < x.length; i++){
+                if (x[i] !== y[i]){
+                    result = "2 chuỗi khoong bằng nhau";
+                    break;
+                } else {
+                    result = "2 chuỗi này bằng nhau";
+                }
+            }
+        } else {
+            result = "2 chuỗi khoong bằng nhau";
+        }
+        alert(result);
+    </script>
+</body>
+</html>

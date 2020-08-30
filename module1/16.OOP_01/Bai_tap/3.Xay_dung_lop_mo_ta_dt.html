@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Mobile {
+            constructor() {
+                this.status = "On";
+                this.pin = 100;
+                this.tinSoanThao = [];
+                this.tinDaGui = [];
+                this.tinDaNhan = [];
+            }
+            turnOn(){
+                this.status = "On";
+            }
+            turnOff(){
+                this.status = "Off";
+            }
+            soanThao(message){
+                if (this.status == "On"){
+                    this.tinSoanThao.push(message);
+                    this.pin--;
+                } else {
+                    alert("Điện thoại đang tắt");
+                }
+            }
+            guiMess(mobile){
+                mobile.tinDaNhan = this.tinSoanThao;
+                this.tinDaNhan = this.tinSoanThao;
+                this.tinSoanThao = [];
+            }
+            showTinDaNhan(){
+                alert(this.tinDaNhan);
+            }
+            showTinDaGui(){
+                alert(this.tinDaGui);
+            }
+        }
+        let nokia = new Mobile();
+        let iphone = new Mobile();
+        nokia.soanThao("Nokia chao iphone");
+        nokia.guiMess(iphone);
+        iphone.showTinDaNhan();
+    </script>
+</body>
+</html>

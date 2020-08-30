@@ -7,13 +7,15 @@
 <body>
     <script>
         function sVaC(r) {
+            result = "";
             let s = (r * r) * 3.14;
-            alert("dien tich hinh tron la: " + s);
+            result += "dien tich hinh tron la: " + s;
             let c = (2 * r) *3.14;
-            alert("chu vi hinh tron la: " + c);
+            result += "chu vi hinh tron la: " + c;
+            return result;
         }
         let input = parseFloat(prompt("Nhap duong kinh hinh tron"));
-        sVaC(input);
+        alert(sVaC(input));
     </script>
 </body>
 </html>

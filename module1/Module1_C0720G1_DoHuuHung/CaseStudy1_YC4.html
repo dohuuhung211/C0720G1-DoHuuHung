@@ -11,23 +11,43 @@
             let choose = parseInt(prompt("1. Thêm khách hàng" + "\n" +
                                         "2. Xóa khách hàng"));
             switch (choose) {
-                case 1:
+                case 1: {
                     let number = parseInt(prompt("Nhập số lượng khách hàng"));
-                    for (let i = 0; i < number; i++){
+                    for (let i = 0; i < number; i++) {
                         let nameCustomer = prompt("Nhập tên khách hàng");
                         arrNameCustomer.push(nameCustomer);
                     }
                     let list = "";
-                    for (i = 0; i < arrNameCustomer.length; i++){
+                    arrNameCustomer.sort();
+                    for (i = 0; i < arrNameCustomer.length; i++) {
                         list += (i + 1) + ". " + arrNameCustomer[i] + "\n";
                     }
                     alert(list);
                     break;
+                }
+                case 2: {
+                    let nameCustomer = prompt("Nhập tên khách hàng muốn xóa");
+                    for (let i = 0; i < arrNameCustomer.length; i++) {
+                        if (arrNameCustomer[i] === nameCustomer) {
+                            arrNameCustomer.splice(i, 1);
+                        } else {
+                            alert("Tên bạn vừa nhập không có trong danh sách");
+                        }
+                        let list = "";
+                        arrNameCustomer.sort();
+                        for (i = 0; i < arrNameCustomer.length; i++) {
+                            list += (i + 1) + ". " + arrNameCustomer[i] + "\n";
+                        }
+                        alert(list);
+                        break;
+                    }
+                }
                 default: {
                     alert("Failed!");
                 }
             }
         }
+
     </script>
 </body>
 </html>

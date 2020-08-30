@@ -5,7 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+    <canvas id="myCanvas" width="300" height="200" style="border: 1px solid #5f6062"></canvas>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        let grd = ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"green");
+        grd.addColorStop(1,"white");
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80)
     </script>
 </body>
 </html>

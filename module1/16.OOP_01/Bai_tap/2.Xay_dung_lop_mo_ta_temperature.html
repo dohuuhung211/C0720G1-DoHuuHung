@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            constructor(cel,fah,ken) {
+                this.cel = cel;
+                this.fah = fah;
+                this.ken = ken;
+            }
+            setCel(cel){
+                this.cel = cel;
+            }
+            doF(){
+                return (this.cel * 1.8) + 32;
+            }
+            doKen(){
+                return this.cel + 273.15;
+            }
+        }
+        let temperature = new Temperature();
+        temperature.setCel(25);
+        alert("Đọ F là: " + temperature.doF() + " và độ K là: " + temperature.doKen());
+
+    </script>
+</body>
+</html>

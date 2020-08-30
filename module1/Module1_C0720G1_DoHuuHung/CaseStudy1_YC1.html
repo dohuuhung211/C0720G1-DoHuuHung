@@ -5,19 +5,33 @@
     <title>CS1</title>
 </head>
 <body>
-    <p id="ten"></p>
-    <p id="socmnd"></p>
-    <p id="ngaysinh"></p>
-    <p id="email"></p>
-    <p id="diachi"></p>
-    <p id="loaiKH"></p>
-    <p id="giamgia"></p>
-    <p id="soluongkhach"></p>
-    <p id="ngaythue"></p>
-    <p id="loaidichvu"></p>
-    <p id="loaiphong"></p>
-    <p id="tongtien"></p>
+    <script>
+        let name;
+        let idCard;
+        let dateOfBirth;
+        let email;
+        let address;
+        let service;
+        let typeRoom;
+        let typeCustomer;
+        let discount;
+        let quantityIncluded;
+        let rentDays;
+        let pay;
 
-    <script src="CaseStudy1_1.js"></script>
+        name = prompt("Ten khach hang");
+        idCard = prompt("Chung minh nhan dan");
+        dateOfBirth = prompt("Ngay sinh");
+        email = prompt("Email");
+        address = prompt("Dia chi");
+        service = prompt("Loai dich vu");
+        typeRoom = prompt("Loai phong thue");
+        typeCustomer = prompt("Loai khach hang");
+        discount = prompt("Giam gia");
+        quantityIncluded = prompt("So luong khach hang");
+        rentDays = prompt("So ngay thue");
+        pay = 300 * parseFloat(rentDays) * (1 - parseFloat(discount) / 100);
+        alert("Ten khach hang: " + name + " CMND: " + idCard + " tong thanh toan la: " + pay);
+    </script>
 </body>
 </html>

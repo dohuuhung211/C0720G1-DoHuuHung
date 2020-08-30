@@ -7,14 +7,16 @@
 <body>
     <script>
         function checkNum(n) {
+            text = "";
             if (!isNaN(n)){
-                alert("Ky tu vua nhap la so")
+                text += "Ky tu vua nhap la so";
             } else {
-                alert("Ky tu vua nhap khong phai so")
+                text += "Ky tu vua nhap khong phai so";
             }
+            return text;
         }
         let so = parseInt(prompt("Nhap ky tu"));
-        checkNum(so);
+        alert(checkNum(so));
     </script>
 </body>
 </html>

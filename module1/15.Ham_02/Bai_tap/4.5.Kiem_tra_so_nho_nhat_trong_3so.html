@@ -7,19 +7,20 @@
 <body>
     <script>
         function checkNumMin(a, b, c) {
-            min = a;
+            text = "";
             if (a < b && a < c){
-                alert(a + " la so nho nhat");
+                text += a + " la so nho nhat";
             } else if (b < c){
-                alert(b + " la so nho nhat");
+                text += b + " la so nho nhat";
             } else {
-                alert(c + " la so nho nhat");
+                text += c + " la so nho nhat";
             }
+            return text;
         }
         let a = parseInt(prompt("nhap so a"));
         let b = parseInt(prompt("nhap so b"));
         let c = parseInt(prompt("nhap so c"));
-        checkNumMin(a,b,c);
+        alert(checkNumMin(a,b,c));
     </script>
 </body>
 </html>

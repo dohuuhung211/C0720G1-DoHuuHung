@@ -8,12 +8,12 @@
     <script>
         let name;
         let idCard;
-        let dayOfBirth;
+        let dateOfBirth;
         let email;
         let address;
         let customerType;
         let discount;
-        let soLuongKhach;
+        let quantityIncluded;
         let rentDays;
         let service;
         let typeRoom;
@@ -38,11 +38,11 @@
         } while (!check);
         check = false;
         do {
-            dayOfBirth = prompt("Ngày sinh:" );
-            if (dayOfBirth.charAt(2) === "/" && dayOfBirth.charAt(5) === "/"){
-                let day = dayOfBirth.substring(0,2);
-                let month = dayOfBirth.substring(3,5);
-                let year = dayOfBirth.substring(6,10);
+            dateOfBirth = prompt("Ngày sinh:" );
+            if (dateOfBirth.charAt(2) === "/" && dateOfBirth.charAt(5) === "/"){
+                let day = dateOfBirth.substring(0,2);
+                let month = dateOfBirth.substring(3,5);
+                let year = dateOfBirth.substring(6,10);
                 if (!isNaN(day) && !isNaN(month) && !isNaN(year)){
                     day = Number.parseFloat(day);
                     month = Number.parseFloat(month);
@@ -58,7 +58,7 @@
                 alert("Ngày sinh chưa đúng");
             }
         } while (!check);
-
+        check = false;
         do {
             email = prompt("Email: ");
             countAt = 0;
@@ -87,10 +87,10 @@
         customerType = prompt("Loại khách hàng: ");
 
         do {
-            soLuongKhach = prompt("Số lượng khách: ");
-            if (!isNaN(soLuongKhach)){
-                soLuongKhach = Number.parseFloat(soLuongKhach);
-                if (Number.isInteger(soLuongKhach)){
+            quantityIncluded = prompt("Số lượng khách: ");
+            if (!isNaN(quantityIncluded)){
+                quantityIncluded = Number.parseFloat(quantityIncluded);
+                if (Number.isInteger(quantityIncluded)){
                     check = true;
                 }
             }
@@ -106,7 +106,7 @@
             rentDays = prompt("Số ngày thuê: ");
             if (!isNaN(rentDays)){
                 rentDays = Number.parseFloat(rentDays);
-                if (Number.isInteger(rentDays)){
+                if (Number.isInteger(rentDays) && rentDays > 0){
                     check = true;
                 }
             }

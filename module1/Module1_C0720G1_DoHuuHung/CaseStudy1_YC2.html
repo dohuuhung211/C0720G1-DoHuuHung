@@ -9,20 +9,20 @@
         let choose = parseInt(prompt("1. Hiển thị thông tin khách hàng. \n2. Chỉnh sửa thông tin. \n3. Hiển thị đơn giá sau khi giảm."));
         let name = "Đỗ Hữu Hưng";
         let idCard = "201666888";
-        let dayOfBirth = "22/11/1995";
+        let dateOfBirth = "22/11/1995";
         let email = "hungdhpd01429@gmail.com";
-        let address = "137 Bình Thái 1, Đà Nẵng";
+        let address = "Đà Nẵng";
         let customerType = "Diamond";
         let discount = "20%";
         let soLuongKhach = 6;
-        let rentDays = 7;
-        let service = "Villa (500$/Ngày)";
+        let rentDays = 8;
+        let service = "Villa";
         let typeRoom = "Business";
         switch (choose) {
             case 1:
                 alert("1.Họ và tên: " + name + "\n" +
                     "2. Chứng minh nhân dân: " + idCard + "\n" +
-                    "3. Ngày sinh: " + dayOfBirth + "\n" +
+                    "3. Ngày sinh: " + dateOfBirth + "\n" +
                     "4. Email: " + email + "\n" +
                     "5. Địa chỉ: " + address + "\n" +
                     "6. Loại khách hàng: " + customerType + "\n" +
@@ -33,10 +33,17 @@
                     "11. Loại phòng thuê: " + typeRoom);
                 break;
             case 2:
-                let edit = parseInt(prompt("1. Họ và tên: " + name + "\n2. CMND: " + idCard + "\n3. Ngày Sinh: " + dayOfBirth
-                    + "\n4. Email: " + email + "\n5. Địa chỉ: " + address + "\n6. Loại khách hàng: " + customerType + "\n7. Giảm giác: 20%"
-                    + "\n8. Số lượng khách hàng: " + soLuongKhach + "\n9. Số ngày thuê: " + rentDays + "\n10. Loại dịch vụ: " + service
-                    + "\n11. Loại phòng thuê: " + typeRoom));
+                let edit = parseInt(prompt("1. Họ và tên: " + name +
+                    "\n2. CMND: " + idCard +
+                    "\n3. Ngày Sinh: " + dateOfBirth +
+                    "\n4. Email: " + email +
+                    "\n5. Địa chỉ: " + address +
+                    "\n6. Loại khách hàng: " + customerType +
+                    "\n7. Giảm giác: 20%" +
+                    "\n8. Số lượng khách hàng: " + soLuongKhach +
+                    "\n9. Số ngày thuê: " + rentDays +
+                    "\n10. Loại dịch vụ: " + service +
+                    "\n11. Loại phòng thuê: " + typeRoom));
                 switch (edit) {
                     case 1: {
                         name = prompt("Họ và tên: ");
@@ -47,7 +54,7 @@
                         break;
                     }
                     case 3: {
-                        dayOfBirth = prompt("Ngày sinh:");
+                        dateOfBirth = prompt("Ngày sinh:");
                         break;
                     }
                     case 4: {
@@ -89,7 +96,7 @@
                 }
                 alert("1.Họ và tên: " + name + "\n" +
                     "2. Chứng minh nhân dân: " + idCard + "\n" +
-                    "3. Ngày sinh: " + dayOfBirth + "\n" +
+                    "3. Ngày sinh: " + dateOfBirth + "\n" +
                     "4. Email: " + email + "\n" +
                     "5. Địa chỉ: " + address + "\n" +
                     "6. Loại khách hàng: " + customerType + "\n" +
@@ -137,7 +144,16 @@
                 } else if (customerType === "Member"){
                     temp += 0;
                 }
-                alert("Số tiền phải trả là: " + (pay * rentDays * (1 - temp/100)) + "$");
+
+                let current = new Date().getFullYear();
+                let birthday = new Date("11/22/1995").getFullYear();
+                let ageCustomer = current - birthday;
+                if (ageCustomer > 30 && address === "Đà Nẵng"){
+                    temp += 2;
+                } else if (ageCustomer > 20 && address === "Đà Nẵng"){
+                    temp += 1;
+                }
+                alert("Số tiền phải trả là: " + (pay * rentDays * (1 - 20/100) - temp) + "usd");
                 break;
 
             }

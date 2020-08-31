@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name;
+    let idCard;
+    let dateOfBirth;
+    let email;
+    let address;
+    let customerType;
+    let discount;
+    let quantityIncluded;
+    let rentDays;
+    let service;
+    let typeRoom;
+    let totalPay;
+    let check = false;
+    let arrListcustomer = [];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Them khach hang" + "\n2. Thong tin khach hang" + "\n3. Sua thong tin khach hang"
+            + "\n4. Xoa khach hang" + "\n5.Thoat"));
+        switch (choose) {
+            case 1:{
+                addNewCustomer();
+                break;
+            }
+            case 2:{
+                displayCustomer();
+                break;
+            }
+            case 3:{
+                editCustomer();
+                break;
+            }
+            case 4:{
+                deleteCustomer();
+                break;
+            }
+            case 5:{
+                break;
+            }
+            default:{
+                alert("Failed");
+            }
+        }
+    }
+
+
+    function deleteCustomer() {
+        let temp = "";
+        for (i = 0; i < arrListcustomer.length; i++){
+            temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
+        }
+        let chooseDelete = parseInt(prompt(temp));
+        let check = parseInt(prompt("Bạn có muốn xóa khách hàng này không?" + "\n1. Yes" + "\n2. No"));
+        if (check === 1){
+            arrListcustomer.splice(chooseDelete,1);
+            alert("Bạn đã xóa thành công");
+        } else {
+            alert("Thoát");
+        }
+        displayMainMenu();
+    }
+
+    function editCustomer(){
+        let temp = "";
+        for (i = 0; i < arrListcustomer.length; i++){
+            temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        let edit = parseInt(prompt("1. Họ và tên: " + arrListcustomer[chooseDisplay][0] +
+            "\n2. CMND: " + arrListcustomer[chooseDisplay][1] +
+            "\n3. Ngày Sinh: " + arrListcustomer[chooseDisplay][2] +
+            "\n4. Email: " + arrListcustomer[chooseDisplay][3] +
+            "\n5. Địa chỉ: " + arrListcustomer[chooseDisplay][4] +
+            "\n6. Loại dịch vụ: " + arrListcustomer[chooseDisplay][5] +
+            "\n7. Loại phòng: " + arrListcustomer[chooseDisplay][6] +
+            "\n8. Loại khách hàng " + arrListcustomer[chooseDisplay][7] +
+            "\n9. Giảm giá " + arrListcustomer[chooseDisplay][8] +
+            "\n10. Số lượng khách hàng: " + arrListcustomer[chooseDisplay][9] +
+            "\n11. Số ngày thuê: " + arrListcustomer[chooseDisplay][10]));
+        switch (edit) {
+            case 1: {
+                arrListcustomer[chooseDisplay][0] = prompt("Họ và tên: ");
+                break;
+            }
+            case 2: {
+                arrListcustomer[chooseDisplay][1] = prompt("CMND: ");
+                break;
+            }
+            case 3: {
+                arrListcustomer[chooseDisplay][2] = prompt("Ngày sinh: ");
+                break;
+            }
+            case 4: {
+                arrListcustomer[chooseDisplay][3] = prompt("Email: ");
+                break;
+            }
+            case 5: {
+                arrListcustomer[chooseDisplay][4] = prompt("Địa chỉ: ");
+                break;
+            }
+            case 6: {
+                arrListcustomer[chooseDisplay][5] = prompt("Loại dịch vụ: ");
+                break
+            }
+            case 7: {
+                arrListcustomer[chooseDisplay][6] = prompt("Loại phòng: ");
+                break;
+            }
+            case 8: {
+                arrListcustomer[chooseDisplay][7] = prompt("Loại khách hàng: ");
+                break;
+            }
+            case 9: {
+                arrListcustomer[chooseDisplay][8] = prompt("Giảm giá: ");
+                break;
+            }
+            case 10: {
+                arrListcustomer[chooseDisplay][9] = prompt("Số lượng khách hàng: ");
+
+                break;
+            }
+            case 11: {
+                arrListcustomer[chooseDisplay][10] = prompt("Số ngày thuê: ");
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+        editCustomer();
+    }
+
+    function displayCustomer() {
+        let temp = "";
+        for (i = 0; i < arrListcustomer.length; i++){
+            temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert(alert("1. Họ và tên: " + arrListcustomer[chooseDisplay][0] + "\n" +
+            "2. Chứng minh nhân dân: " + arrListcustomer[chooseDisplay][1] + "\n" +
+            "3. Ngày sinh: " + arrListcustomer[chooseDisplay][2] + "\n" +
+            "4. Email: " + arrListcustomer[chooseDisplay][3] + "\n" +
+            "5. Địa chỉ: " + arrListcustomer[chooseDisplay][4] + "\n" +
+            "6. Loại dịch vụ: " + arrListcustomer[chooseDisplay][5] + "\n" +
+            "7. Loại phòng: " + arrListcustomer[chooseDisplay][6] + "\n" +
+            "8. Loại khách hàng: " + arrListcustomer[chooseDisplay][7] + "\n" +
+            "9. Giảm giá: " + arrListcustomer[chooseDisplay][8] + "\n" +
+            "10. Số khách hàng: " + arrListcustomer[chooseDisplay][9] + "\n" +
+            "11. Số ngày thuê: " + arrListcustomer[chooseDisplay][10]));
+        displayMainMenu();
+    }
+    function addNewCustomer() {
+        customerInfo = [];
+        let name = prompt("Ten khach hang");
+        do {
+            idCard = prompt("Nhập số CMND: ");
+            if (!isNaN(idCard)){
+                idCard = Number.parseFloat(idCard);
+            }
+            if (!Number.isInteger(idCard)){
+                alert("CMND không hợp lệ");
+                continue;
+            }
+            if (idCard < 100000000 || idCard > 999999999){
+                alert("CMND không hợp lệ");
+                continue;
+            }
+            check = true;
+        } while (!check);
+        check = false;
+
+        do {
+            dateOfBirth = prompt("Ngày sinh:" );
+            if (dateOfBirth.charAt(2) === "/" && dateOfBirth.charAt(5) === "/"){
+                let day = dateOfBirth.substring(0,2);
+                let month = dateOfBirth.substring(3,5);
+                let year = dateOfBirth.substring(6,10);
+                if (!isNaN(day) && !isNaN(month) && !isNaN(year)){
+                    day = Number.parseFloat(day);
+                    month = Number.parseFloat(month);
+                    year = Number.parseFloat(year);
+                    if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)){
+                        if (day < 32 && month < 13 && year > 1900){
+                            check = true;
+                        }
+                    }
+                }
+            }
+            if (!check){
+                alert("Ngày sinh chưa đúng");
+            }
+        } while (!check);
+        check = false;
+
+        do {
+            email = prompt("Email: ");
+            countAt = 0;
+            countDoc = 0;
+            for (i = 0; i < email.length; i++){
+                if (email.charAt(i) === "@"){
+                    countAt++;
+                    for (j = i + 1; j < email.length; j++){
+                        if (email.charAt(j) === "."){
+                            countDoc++;
+                        }
+                    }
+                }
+            }
+            if (countAt != 1 || countDoc < 1){
+                alert("Email bạn nhập chưa đúng");
+            } else {
+                check = true;
+            }
+        } while (!check);
+        check = false;
+
+        let address = prompt("Dia chi");
+        let service = prompt("Loai dich vu");
+        let typeRoom = prompt("Loai phong thue");
+        let typeCustomer = prompt("Loai khach hang");
+        let discount = prompt("Giam gia");
+        do {
+            quantityIncluded = prompt("Số lượng khách: ");
+            if (!isNaN(quantityIncluded)){
+                quantityIncluded = Number.parseFloat(quantityIncluded);
+                if (Number.isInteger(quantityIncluded)){
+                    check = true;
+                }
+            }
+            if (!check){
+                alert("Vui lòng nhập đúng số lượng")
+            }
+        } while (!check);
+        check = false;
+        do {
+            rentDays = prompt("Số ngày thuê: ");
+            if (!isNaN(rentDays)){
+                rentDays = Number.parseFloat(rentDays);
+                if (Number.isInteger(rentDays) && rentDays > 0){
+                    check = true;
+                }
+            }
+            if (!check){
+                alert("Mời nhập đúng số ngày");
+            }
+        } while (!check);
+        check = false;
+        customerInfo.push(name);
+        customerInfo.push(idCard);
+        customerInfo.push(dateOfBirth);
+        customerInfo.push(email);
+        customerInfo.push(address);
+        customerInfo.push(service);
+        customerInfo.push(typeRoom);
+        customerInfo.push(typeCustomer);
+        customerInfo.push(discount);
+        customerInfo.push(quantityIncluded);
+        customerInfo.push(rentDays);
+        arrListcustomer.push(customerInfo);
+        arrListcustomer[0][0];
+        alert("Ban da nhap thanh cong");
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

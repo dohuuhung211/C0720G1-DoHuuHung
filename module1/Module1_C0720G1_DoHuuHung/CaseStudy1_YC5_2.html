@@ -52,7 +52,7 @@
 
     function deleteCustomer() {
         let temp = "";
-        for (i = 0; i < arrListcustomer.length; i++){
+        for (let i = 0; i < arrListcustomer.length; i++){
             temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
         }
         let chooseDelete = parseInt(prompt(temp));

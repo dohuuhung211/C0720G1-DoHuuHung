@@ -9,11 +9,12 @@
     <script>
 
         class Hero {
-            constructor(image,top,left,size) {
+            constructor(image,top,left,size,speed) {
                 this.image = image;
                 this.top = top;
                 this.left = left;
                 this.size = size;
+                this.speed = speed;
             }
             getHeroElement(){
                 return '<img width="'+ this.size + '"' +
@@ -22,17 +23,39 @@
                     ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
             }
             moveRight(){
-                this.left += 50;
+                this.left += this.speed;
                 console.log("ok: " + this.left);
             }
-        }
-        let hero = new Hero('pikachu.png', 20, 30, 200);
-        function star() {
-            if (hero.left < window.innerWidth - hero.size) {
-                hero.moveRight();
+            moveLeft(){
+                this.left -= this.speed;
+                console.log("ok: " + this.left);
             }
+            moveDown(){
+                this.top += this.speed;
+            }
+            moveUp(){
+                this.top -= this.speed;
+            }
+        }
+        let hero = new Hero('pikachu.png', 20, 30, 200, 150);
+        function star() {
+            if (hero.left < window.innerWidth - hero.size && 5 * hero.top < window.innerHeight - hero.size) {
+                hero.moveRight();
                 document.getElementById("game").innerHTML = hero.getHeroElement();
-                setTimeout(star,100);
+                setTimeout(star, 500);
+            } else if (hero.left > window.innerWidth - hero.size && hero.top < window.innerHeight - hero.size){
+                hero.moveDown();
+                document.getElementById("game").innerHTML = hero.getHeroElement();
+                setTimeout(star, 500);
+            } else if (hero.left > 0.2 * hero.size && hero.top > window.innerHeight - hero.size){
+                hero.moveLeft();
+                document.getElementById("game").innerHTML = hero.getHeroElement();
+                setTimeout(star, 500);
+            } else {
+                hero.moveUp();
+                document.getElementById("game").innerHTML = hero.getHeroElement();
+                setTimeout(star, 500);
+            }
         }
         star();
     </script>

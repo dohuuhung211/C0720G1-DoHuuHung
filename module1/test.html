@@ -38,22 +38,22 @@
 <!--        -->
 <!--    </script>-->
     <button type="button" value="addSV" onclick="themMoiSV()">Them moi sinh vien</button>
-    <input type="text" value="" name="find">
-    <button type="button" value="findName">Tim kiem theo ten</button>
+    <input type="text" value="" id="find">
+    <button type="button" value="findName" onclick="timKiemSV()">Tim kiem theo ten</button>
     <p id="hienthi"></p>
     <script>
         class SinhVien {
             constructor(maSV,ten,ngaySinh,email) {
-                this.MaSV = maSV;
+                this.maSV = maSV;
                 this.ten = ten;
                 this.ngaySinh = ngaySinh;
                 this.email = email;
             }
             getMaSV(){
-                return this.MaSV;
+                return this.maSV;
             }
             setMaSV(maSV){
-                this.MaSV = maSV;
+                this.maSV = maSV;
             }
             getTen(){
                 return this.ten;
@@ -74,8 +74,8 @@
                 this.email = email;
             }
             getInfo(){
-                return "1. Ma SV: " + this.maSV + " 2. Ten SV: " + this.ten + " 3. Ngay sinh: " +
-                        this.ngaySinh + " 4. Email: " + this.email;
+                return "1. Ma SV: " + this.maSV + "\n2. Ten SV: " + this.ten + "\n3. Ngay sinh: " +
+                        this.ngaySinh + "\n4. Email: " + this.email;
             }
         }
         function themMoiSV(){
@@ -87,6 +87,37 @@
             danhSachSV.push(sinhVienMoi);
             hienthi(danhSachSV);
         }
+
+        function sua(i) {
+            let choose = parseInt(prompt(danhSachSV[i].getInfo()))
+            switch(choose){
+                case 1:{
+                    danhSachSV[i].setMaSV(prompt("Nhap lai ma sinh vien"));
+                    break;
+                }
+                case 2:{
+                    danhSachSV[i].setTen(prompt("Nhap lai ten sinh vien"));
+                    break;
+                }
+                case 3:{
+                    danhSachSV[i].setNgaySinh(prompt("Nhap lai ngay sinh"));
+                    break;
+                }
+                case 4:{
+                    danhSachSV[i].setEmail(prompt("Nhap lai ma email"));
+                    break;
+                }
+                case null:{
+                    break;
+                }
+                default:{
+                    sua(i);
+                    break;
+                }
+            }
+            hienthi(danhSachSV);
+        }
+
         function xoa(i){
             let xacNhan = confirm("Ban co chac muon xoa?");
             if (xacNhan){
@@ -96,6 +127,18 @@
             }
             hienthi(danhSachSV);
         }
+
+        function timKiemSV(){
+            let timKiemSV = document.getElementById("find").value;
+            let timKiem = [];
+            for (let i = 0; i < danhSachSV.length; i++){
+                if (danhSachSV[i].getTen() === timKiemSV){
+                    timKiem.push(danhSachSV[i]);
+                }
+            }
+            hienthi(timKiem);
+        }
+
         let danhSachSV = [];
         let sv1 = new SinhVien("MSV-0001","Hung","22/11/1995","hungdh@gmail.com");
         let sv2 = new SinhVien("MSV-0002","trang","22/11/1999","trangt@gmail.com");

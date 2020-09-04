@@ -38,7 +38,7 @@
         function deleteCustomer() {
             let temp = "";
             for (i = 0; i < arrListcustomer.length; i++){
-                temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
+                temp += (i + 1) + ". Name: " + arrListcustomer[i][0] + "\n";
             }
             let chooseDelete = parseInt(prompt(temp));
             let check = parseInt(prompt("Bạn có muốn xóa khách hàng này không?" + "\n1. Yes" + "\n2. No"));
@@ -124,7 +124,7 @@
         function displayCustomer() {
             let temp = "";
             for (i = 0; i < arrListcustomer.length; i++){
-                temp += i + ". Name: " + arrListcustomer[i][0] + "\n";
+                temp += (i + 1) + ". Name: " + arrListcustomer[i][0] + "\n";
             }
             let chooseDisplay = parseInt(prompt(temp));
             alert(alert("1. Họ và tên: " + arrListcustomer[chooseDisplay][0] + "\n" +

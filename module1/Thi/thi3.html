@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function isFibonacci() {
+            let result = "";
+            let n = parseInt(prompt("Nhap so n"));
+            let x1 = 0;
+            let x2 = 1;
+            let str = x1 + ", " + x2 + ", ";
+            for (let i = 1; i <= 20; i++) {
+                x = x1 + x2;
+                str += x + ", ";
+                x1 = x2;
+                x2 = x;
+            }
+            alert(str);
+            if (n === x){
+                result = true;
+            } else {
+                result = false;
+            }
+            return result;
+        }
+        alert(isFibonacci());
+    </script>
+</body>
+</html>

@@ -168,9 +168,13 @@
     let arrEmployee = [];
     let arrListCustomer = [];
     function displayMainMenu() {
-        let choose = parseInt(prompt("1. Them khach hang" + "\n2. Thong tin khach hang" + "\n3. Sua thong tin khach hang"
-            + "\n4. Xoa khach hang" + "\n5. " +
-            "Tong thanh toan" + "\n6. Them nhan vien" + "\n7. Thong tin nhan vien"));
+        let choose = parseInt(prompt("1. Them khach hang" +
+            "\n2. Thong tin khach hang" +
+            "\n3. Sua thong tin khach hang" +
+            "\n4. Xoa khach hang" +
+            "\n5. Tong thanh toan" +
+            "\n6. Them nhan vien" +
+            "\n7. Thong tin nhan vien"));
         switch (choose) {
             case 1:{
                 addNewCustomer();
@@ -345,6 +349,77 @@
             alert("Bạn đã xóa thành công");
         } else {
             alert("Thoát");
+        }
+        displayMainMenu();
+    }
+
+    function editCustomer(){
+        let temp = "";
+        for (i = 0; i < arrListCustomer.length; i++){
+            temp += i + ". Name: " + arrListCustomer[i].getName() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        let edit = parseInt(prompt(
+            "1. Họ và tên: " + arrListCustomer[chooseDisplay].getName() +
+            "\n2. CMND: " + arrListCustomer[chooseDisplay].getIDCard() +
+            "\n3. Ngày Sinh: " + arrListCustomer[chooseDisplay].getDateOfBirth() +
+            "\n4. Email: " + arrListCustomer[chooseDisplay].getEmail() +
+            "\n5. Địa chỉ: " + arrListCustomer[chooseDisplay].getAddress() +
+            "\n6. Loại dịch vụ: " + arrListCustomer[chooseDisplay].getService() +
+            "\n7. Loại phòng: " + arrListCustomer[chooseDisplay].getTypeRoom() +
+            "\n8. Loại khách hàng " + arrListCustomer[chooseDisplay].getTypeCustomer() +
+            "\n9. Giảm giá " + arrListCustomer[chooseDisplay].getDiscount() +
+            "\n10. Số lượng khách hàng: " + arrListCustomer[chooseDisplay].getQuantityIncluded() +
+            "\n11. Số ngày thuê: " + arrListCustomer[chooseDisplay].getRentDays()));
+        switch (edit) {
+            case 1: {
+                arrListCustomer[chooseDisplay].setName(prompt("Họ và tên: "));
+                break;
+            }
+            case 2: {
+                arrListCustomer[chooseDisplay].setIDCard(prompt("CMND: "));
+                break;
+            }
+            case 3: {
+                arrListCustomer[chooseDisplay].setDateOfBirth(prompt("Ngày sinh: "));
+                break;
+            }
+            case 4: {
+                arrListCustomer[chooseDisplay].setEmail(prompt("Email: "));
+                break;
+            }
+            case 5: {
+                arrListCustomer[chooseDisplay].setAddress(prompt("Địa chỉ: "));
+                break;
+            }
+            case 6: {
+                arrListCustomer[chooseDisplay].setService(prompt("Loại dịch vụ: "));
+                break
+            }
+            case 7: {
+                arrListCustomer[chooseDisplay].setTypeRoom(prompt("Loại phòng: "));
+                break;
+            }
+            case 8: {
+                arrListCustomer[chooseDisplay].setTypeCustomer(prompt("Loại khách hàng: "));
+                break;
+            }
+            case 9: {
+                arrListCustomer[chooseDisplay].setDiscount(prompt("Giảm giá: "));
+                break;
+            }
+            case 10: {
+                arrListCustomer[chooseDisplay].setQuantityIncluded(prompt("Số lượng khách hàng: "));
+
+                break;
+            }
+            case 11: {
+                arrListCustomer[chooseDisplay].setRentDays(prompt("Số ngày thuê: "));
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
         }
         displayMainMenu();
     }

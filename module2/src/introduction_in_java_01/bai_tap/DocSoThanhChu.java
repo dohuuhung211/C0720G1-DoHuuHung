@@ -1,9 +1,10 @@
 package introduction_in_java_01.bai_tap;
-import java.util.Scanner;​
+import java.util.Scanner;
 public class DocSoThanhChu {
-    static String read1To10(int number) {
+
+    static String from1to10(int numb){
         String str = "";
-        switch(number) {
+        switch (numb){
             case 1:
                 str = "one";
                 break;
@@ -31,15 +32,37 @@ public class DocSoThanhChu {
             case 9:
                 str = "nine";
                 break;
-            case 10:
-                str = "ten";
-                break;
-        }​
+        }
         return str;
-    }​
-    static String read11To19(int number) {
-        String str = null;
-        switch(number) {
+    }
+    static String readTy(int numb){
+        String str = "";
+        switch (numb){
+            case 20:
+                str = "twenty";
+                break;
+            case 30:
+                str = "thirty";
+                break;
+            case 40:
+                str = "forty";
+                break;
+            case 50:
+                str = "fifty";
+                break;
+            case 60:
+            case 70:
+            case 80:
+            case 90:
+                int tens = numb / 10;
+                str = from1to10(tens) + "ty";
+                break;
+        }
+        return str + " ";
+    }
+    static String from11to19(int numb){
+        String str = "";
+        switch (numb) {
             case 11:
                 str = "eleven";
                 break;
@@ -59,54 +82,43 @@ public class DocSoThanhChu {
             case 17:
             case 18:
             case 19:
-                int hangDonVi = number % 10;
-                str = read1To10(hangDonVi) + "teen";
+                int ones = numb % 10;
+                str = from1to10(ones) + "teen";
                 break;
-        }​
+        }
         return str;
-    }​
-    static String readNumberTy(int number) {
-        String str = null;​
-        switch (number) {
-            case 20:
-                str = "twenty";
-                break;
-            case 30:
-                str = "thirty";
-                break;
-            case 40:
-                str = "forty";
-                break;
-            case 50:
-                str = "fifty";
-                break;
-            case 60:
-            case 70:
-            case 80:
-            case 90:
-                int hangChuc = number / 10;
-                str = read1To10(hangChuc) + "ty";
-                break;
-        }​
+    }
+    static String readHundred(int numb){
+        return from1to10(numb) + " hundred";
+    }
+    static String from1to99(int numb){
+        String str ="";
+        if (numb > 0 && numb < 10){
+            str = from1to10(numb);
+        } else if (numb > 10 && numb < 20){
+            str = from11to19(numb);
+        } else if (numb > 20 && numb < 100){
+            int tens = numb / 10;
+            String strTens = tens + "0";
+            int ones = numb % 10;
+            str = readTy(Integer.parseInt(strTens)) + from1to10(ones);
+        }
         return str;
     }
     public static void main(String[] args) {
-        // INPUT
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input number: ");
-        int number = scanner.nextInt();
-        //21
-        int hangChuc = number / 10;
-        String strHangChuc = hangChuc + "0";
-        int hangDonVi = number % 10;
-        String result = readNumberTy(Integer.parseInt(strHangChuc)) + " " + read1To10(hangDonVi);
-        // STEP 5: 3 chu so
-        // 100, 200, 300, 400
-        // readOneHundred(int number) -> hangTram = number / 100
-        // -> read1To10(hangTram) + "one hundred"
-        // hangChucVaDonVi = number % 100;
-        // read1To99(hangChucVaDonVi);
-        // OUTPUT
-        System.out.println("Result: " + result);
+        System.out.println("nhap so can doc");
+        int numb = scanner.nextInt();
+        String str = "";
+        if (numb > 0 && numb < 100){
+            str = from1to99(numb);
+            System.out.println(str);
+        } else {
+            int ones = numb % 10;
+            int onesAndTens = numb % 100;
+            int huns = numb / 100;
+            String result = readHundred(huns) + " and " + from1to99(onesAndTens);
+            System.out.println(result);
+        }
     }
 }

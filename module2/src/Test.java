@@ -1,14 +1,13 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Test {
-    static int myMethodInt(int x, int y){
-        return x + y;
-    }
-    static double myMethodDouble(double x, double y){
-        return x + y;
+    static public void m(int[] x) {
+        x[0] = 200;
     }
     public static void main(String[] args) {
-        int a = myMethodInt(5,5);
-        double b = myMethodDouble(5.5,5.0);
-        System.out.println(a);
-        System.out.println(b);
+        int[] a = {50, 100};
+        m(a);
+        System.out.println(a[0]);
     }
 }

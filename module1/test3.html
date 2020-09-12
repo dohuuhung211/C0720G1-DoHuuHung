@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Đây là chú thích -->
+<!--// Đây là chú thích-->
+<!--    <form action="">-->
+<!--        <fieldset>-->
+<!--            <legend>Test form</legend>-->
+<!--            <label>Name:</label>-->
+<!--            <input type="text" name="name"><br>-->
+<!--            <label>Email:</label>-->
+<!--            <input type="text" name="email" required><br>-->
+<!--            <label>Date of birth:</label>-->
+<!--            <input type="text" name="dob" disabled>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<!--    <form>-->
+<!--        <input type="radio" name="gender" value="Male" checked>Male<br>-->
+<!--        <input type="radio" name="gender" value="Female">Female<br>-->
+<!--        <input type="radio" name="gender" value="Other">Other-->
+<!--        <input type="button" onclick="alert('Hello World!')" value="Click me"><br>-->
+<!--        <input type="month" name="range" value="input here">-->
+<!--    </form>-->
+<!--    <select name="city">-->
+<!--        <option>a</option>-->
+<!--        <option>a</option>-->
+<!--        <option>a</option>-->
+<!--    </select>-->
+<!--    <select name="city">b</select>-->
+<!--    <select name="city">c</select>-->
+<!--    <script>-->
+<!--        // let count = 0;-->
+<!--        // while (count++ < 10){-->
+<!--        //     count++;-->
+<!--        // }-->
+<!--        // console.log(count);-->
+<!--        // let number = 5;-->
+<!--        //-->
+<!--        // if (number++ > 5) {-->
+<!--        //     number += 1;-->
+<!--        // } else {-->
+<!--        //     number -= 1;-->
+<!--        // }-->
+<!--        // alert(number);-->
+    <script>
+        function gcd(a,b) {
+            a = Math.abs(a);
+            b = Math.abs(b);
+            if (b > a) {
+                var temp = a;
+                a = b;
+                b = temp;
+            }
+            while (true) {
+                if (b == 0) return a;
+                a %= b;
+                if (a == 0) return b;
+                b %= a;
+            }
+        }
+        let a = prompt("Nhap so a");
+        let b = prompt("Nhap so b");
+        alert("ucln la: " + gcd(a,b));
+        alert("Bcnn la: " + a * b / gcd(a,b));
+    </script>
+</body>
+</html>

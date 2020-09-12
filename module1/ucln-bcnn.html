@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function gcd(a,b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        if (b > a) {
+            var temp = a;
+            a = b;
+            b = temp;
+        }
+        while (true) {
+            if (b == 0) return a;
+            a %= b;
+            if (a == 0) return b;
+            b %= a;
+        }
+    }
+    let a = prompt("Nhap so a");
+    let b = prompt("Nhap so b");
+    alert("ucln la: " + gcd(a,b));
+    alert("Bcnn la: " + a * b / gcd(a,b));
+</script>
+</body>
+</html>

@@ -54,12 +54,7 @@ public class Test {
 //        System.out.println(Arrays.toString(arr1));
 //        System.out.println(Arrays.toString(arr2));
 //        System.out.println(Arrays.toString(arr3));
-        Scanner scanner = new Scanner(System.in);
-        int[] arr1, arr2;
-        arr1 = Person.inArr(2,scanner);
-        arr2 = Person.inArr(3,scanner);
-        System.out.println(Arrays.toString(arr1));
-        System.out.println(Arrays.toString(arr2));
+
 
     }
 }

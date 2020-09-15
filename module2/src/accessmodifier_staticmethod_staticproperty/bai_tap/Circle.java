@@ -1,4 +1,4 @@
-package lop_va_doi_tuong_04.bai_tap;
+package accessmodifier_staticmethod_staticproperty.bai_tap;
 
 public class Circle {
     private double radius = 1.0;

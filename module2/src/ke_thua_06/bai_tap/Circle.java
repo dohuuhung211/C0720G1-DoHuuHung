@@ -23,10 +23,10 @@ public class Circle {
         return Math.PI * Math.pow(radius,2);
     }
 
-    @Override
-    public String toString() {
-        return "Hinh tron co mau " + getColor() + ", ban kinh la " + getRadius() + " va dien tich la " + getArea();
-    }
+//    @Override
+//    public String toString() {
+//        return "Hinh tron co mau " + getColor() + ", ban kinh la " + getRadius() + " va dien tich la " + getArea();
+//    }
 
     public static void main(String[] args) {
         Circle cir = new Circle();

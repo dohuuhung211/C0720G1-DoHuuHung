@@ -1,11 +1,11 @@
 package ke_thua_06.bai_tap;
 
-public class Point2D {
+public class Point {
     protected float x = 0.0f;
     protected float y = 0.0f;
-    public Point2D(){
+    public Point(){
     }
-    public Point2D(float x, float y){
+    public Point(float x, float y){
         this.x = x;
         this.y = y;
     }
@@ -40,7 +40,7 @@ public class Point2D {
     }
 
     public static void main(String[] args) {
-        Point2D point2D = new Point2D(3.5f,3.0f);
-        System.out.println(point2D);
+        Point point = new Point(5,3);
+        System.out.println(point);
     }
 }

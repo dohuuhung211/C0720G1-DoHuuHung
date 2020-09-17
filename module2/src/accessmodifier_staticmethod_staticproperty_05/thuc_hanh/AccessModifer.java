@@ -1,4 +1,4 @@
-package accessmodifier_staticmethod_staticproperty.thuc_hanh;
+package accessmodifier_staticmethod_staticproperty_05.thuc_hanh;
 
 class AccessModifer {
     public int data = 40;

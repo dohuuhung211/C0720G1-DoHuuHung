@@ -1,4 +1,4 @@
-package accessmodifier_staticmethod_staticproperty.thuc_hanh;
+package accessmodifier_staticmethod_staticproperty_05.thuc_hanh;
 
 public class TestStaticProperty {
     public static void main(String[] args) {

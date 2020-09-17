@@ -3,7 +3,9 @@ package ke_thua_06.bai_tap;
 public class MovablePoint extends Point {
     protected float xSpeed = 0.0f;
     protected float ySpeed = 0.0f;
-    public MovablePoint(){};
+    public MovablePoint(){
+        super();
+    };
 
     public MovablePoint(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
@@ -16,19 +18,19 @@ public class MovablePoint extends Point {
         this.ySpeed = ySpeed;
     }
 
-    public float getxSpeed() {
+    public float getXSpeed() {
         return xSpeed;
     }
 
-    public void setxSpeed(float xSpeed) {
+    public void setXSpeed(float xSpeed) {
         this.xSpeed = xSpeed;
     }
 
-    public float getySpeed() {
+    public float getYSpeed() {
         return ySpeed;
     }
 
-    public void setySpeed(float ySpeed) {
+    public void setYSpeed(float ySpeed) {
         this.ySpeed = ySpeed;
     }
     public void setSpeed(float xSpeed, float ySpeed){
@@ -39,15 +41,15 @@ public class MovablePoint extends Point {
         return new float[]{this.x,this.ySpeed};
     }
     public MovablePoint move(){
-        x += xSpeed;
-        y += ySpeed;
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
         return this;
 
     }
     @Override
     public String toString() {
         return super.toString() + ", " + " xSpeed: " +
-               getxSpeed() + ", ySpeed: " + getySpeed();
+               getXSpeed() + ", ySpeed: " + getYSpeed();
     }
 //    @Override
 //    public String toString() {
@@ -55,8 +57,4 @@ public class MovablePoint extends Point {
 //                "xSpeed=" + xSpeed +
 //                ", ySpeed=" + ySpeed +
 //                '}';
-    public static void main(String[] args) {
-        MovablePoint movable = new MovablePoint(5,6,7,8);
-        System.out.println(movable);
-    }
 }

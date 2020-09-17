@@ -40,7 +40,14 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        Point point = new Point(5,3);
-        System.out.println(point);
+        Point point = new Point(5, 6);
+        System.out.println("Point " + point);
+
+        MovablePoint moveablePoint = new MovablePoint(6, 8, 2, 1);
+        System.out.println("Start: " + moveablePoint);
+        System.out.println("End: " + moveablePoint.move());
+
+        MovablePoint moveablePoint2 = new MovablePoint(5, 6);
+
     }
 }

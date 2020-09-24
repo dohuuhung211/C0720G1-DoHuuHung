@@ -1,6 +1,6 @@
-import java.util.Arrays;
+import java.util.*;
 import java.util.zip.CheckedInputStream;
-import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
 //        Person a = new Person("Hung",25,1.8f);
@@ -54,6 +54,39 @@ public class Test {
 //        System.out.println(Arrays.toString(arr1));
 //        System.out.println(Arrays.toString(arr2));
 //        System.out.println(Arrays.toString(arr3));
+//        Stack<String> myStack = new Stack();
+//        myStack.push("1");
+//        myStack.push("2");
+//        myStack.push("3");
+//        myStack.push("4");
+//        System.out.println(myStack.get(1));
+//        while (!myStack.isEmpty()){
+//            System.out.println(myStack.pop());
+//        }
+////        for (int i = 0; i < myStack.size(); i++){
+////            System.out.println(myStack.get(i));
+////        }
+        Queue<String> myQueue = new LinkedList<>();
+//        myQueue.add("Clone");
+//        myQueue.add("fake");
+//        myQueue.add("real");
+//        myQueue.add("unreal");
+
+//        for (int i = 0; i < myQueue.size(); i++){
+//            System.out.println(((LinkedList<String>) myQueue).get(i));
+//        }
+//        System.out.println(myQueue.size());
+//        System.out.println(myQueue.peek());
+//        for (int i = 0; i < myQueue.size(); i++){
+//            System.out.println(myQueue.poll());
+//        }
+//        System.out.println(myQueue.size());
+        if (myQueue.isEmpty()){
+            myQueue.add("unreal");
+        } else {
+            myQueue.poll();
+        }
+        System.out.println(myQueue);
 
 
     }

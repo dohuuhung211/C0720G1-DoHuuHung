@@ -27,18 +27,19 @@ class Person{
         tm.put("six",6);
         tm.put("seven",7);
         tm.put("eight",8);
-        for (String key: tm.keySet()){
-            System.out.println(key + " " + tm.get(key));
-        }
+        System.out.println(tm.get("five"));
+//        for (String key: tm.keySet()){
+//            System.out.println(key + " " + tm.get(key));
+//        }
         Iterator<String> ite1 = tm.keySet().iterator();
         while (ite1.hasNext()){
-            System.out.println(ite1.next());
+            System.out.println(ite1.next().toUpperCase() + " ");
         }
-        for (Integer value: tm.values()){
-            System.out.println(value);
-        }
-        //kiem tra key co hay ko
-        tm.containsKey("five");
-        System.out.println(tm.containsKey("a"));
+//        for (Integer value: tm.values()){
+//            System.out.println(value);
+//        }
+//        //kiem tra key co hay ko
+//        tm.containsKey("five");
+//        System.out.println(tm.containsKey("a"));
     }
 }

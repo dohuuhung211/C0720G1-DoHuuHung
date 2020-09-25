@@ -79,6 +79,7 @@ public class MyLinkedList<E> {
         temp.next = newElement;
         newElement.next = holder;
 
+        
         numNodes++;
     }
 }

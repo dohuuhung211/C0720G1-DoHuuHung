@@ -1,5 +1,8 @@
+import collections_10.bai_tap.MyArrayListTest;
+
 import java.util.*;
-import java.util.zip.CheckedInputStream;
+
+import static collections_10.bai_tap.MyArrayListTest.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -66,7 +69,7 @@ public class Test {
 ////        for (int i = 0; i < myStack.size(); i++){
 ////            System.out.println(myStack.get(i));
 ////        }
-        Queue<String> myQueue = new LinkedList<>();
+//        Queue<String> myQueue = new LinkedList<>();
 //        myQueue.add("Clone");
 //        myQueue.add("fake");
 //        myQueue.add("real");
@@ -81,13 +84,13 @@ public class Test {
 //            System.out.println(myQueue.poll());
 //        }
 //        System.out.println(myQueue.size());
-        if (myQueue.isEmpty()){
-            myQueue.add("unreal");
-        } else {
-            myQueue.poll();
-        }
-        System.out.println(myQueue);
-
+//        if (myQueue.isEmpty()){
+//            myQueue.add("unreal");
+//            myQueue.add("real");
+//        } else {
+//            myQueue.poll();
+//        }
+//        System.out.println(myQueue.poll());
 
     }
 }

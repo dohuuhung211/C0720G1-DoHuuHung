@@ -18,12 +18,10 @@ public class MainClass {
 //        productManager.editProduct();
 //
         List<Product> sp1 = new ArrayList<>();
-//        sp1.add(new Product(1,"Nam"));
-//        sp1.add(new Product(1,"Hoang"));
-//        sp1.add(new Product(1,"Khai"));
-//        sp1.add(new Product(1,"Buoi"));
-        ProductManager productManager = new ProductManager();
-        sp1.add(productManager);
+        sp1.add(new Product(1,"Nam"));
+        sp1.add(new Product(1,"Hoang"));
+        sp1.add(new Product(1,"Khai"));
+        sp1.add(new Product(1,"Buoi"));
         for (Product pro: sp1){
             System.out.println(pro);
         }

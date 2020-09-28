@@ -1,9 +1,8 @@
 package java_collection_framework_12.bai_tap.arraylist_linkedlist;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-public class ProductManager {
+import java.util.*;
+
+public class ProductManager{
 
     List<Product> productList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
@@ -83,5 +82,17 @@ public class ProductManager {
             }
         }
         printList();
+    }
+
+    public void sortByComparator() {
+        Collections.sort(this.productList, new Comparator<Product>() {
+            @Override
+            public int compare(Product t, Product t1) {
+                if (t.getId() == t1.getId()){
+                    return t.getName().compareTo(t1.getName());
+                }
+                return t.getId() - t1.getId();
+            }
+        });
     }
 }

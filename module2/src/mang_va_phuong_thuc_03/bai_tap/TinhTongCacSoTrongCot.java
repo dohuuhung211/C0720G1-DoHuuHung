@@ -3,36 +3,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class TinhTongCacSoTrongCot {
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        int[][] array = {
-//                {1,2,3},
-//                {4,5,6}
-//        };
-//
-//        System.out.println("Nhap cot muon tinh");
-//        System.out.println("1. Tinh cot 1");
-//        System.out.println("2. Tinh cot 2");
-//        System.out.println("3. Tinh cot 3");
-//        System.out.println("4. Thoat");
-//        while (true) {
-//            int sum = 0;
-//            int choose = scanner.nextInt();
-//            switch (choose) {
-//                case 1:
-//                    sum = array[0][0] + array[1][0];
-//                    break;
-//                case 2:
-//                    sum = array[0][1] + array[1][1];
-//                    break;
-//                case 3:
-//                    sum = array[0][2] + array[1][2];
-//                    break;
-//                case 4:
-//                    System.exit(4);
-//            }
-//            System.out.println("Tong cot la: " + sum);
-//        }
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap so dong");
         int n = scanner.nextInt();

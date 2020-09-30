@@ -15,9 +15,7 @@ public class MinhHoaSapXepChen {
             for (; j >= 0 && array[j] > temp; j--){
                 System.out.println("insert " + array[j] + ", index= " + j + " into " + array[i] + ", index= " + i);
                 array[j+1] = array[j];
-                for (int x: array){
-                    System.out.print(x + " ");
-                }
+                System.out.println(Arrays.toString(array));
                 System.out.print("\n");
             }
             array[j+1] = temp;

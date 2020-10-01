@@ -15,10 +15,8 @@ public class Triangle {
         this.side2 = side2;
         this.side3 = side3;
     }
-    public void inputNumber() throws IllegalTriangleException {
-        if (side1 + side2 < side3 || side2 + side3 < side1 || side1 + side3 < side2){
-            throw new IllegalTriangleException("not a triangle.");
-        } else if (side1 < 0 || side2 < 0 || side3 < 0){
+    public void inputNumber() throws IllegalTriangleException{
+        if (side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2){
             throw new IllegalTriangleException("not a triangle.");
         } else {
             System.out.println("right a triangle!");

@@ -5,7 +5,4 @@ public class IllegalTriangleException extends Exception{
     public IllegalTriangleException(String massage){
         super(massage);
     }
-    public String getString(){
-        return message;
-    }
 }

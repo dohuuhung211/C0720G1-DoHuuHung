@@ -24,7 +24,8 @@ public class ArrayExample {
         try {
             System.out.println("Phan tu co chi so " + x + " la " + arr[x]);
         } catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Chi so vuot qua gioi han cua mang");
+            System.err.println("Chi so vuot qua gioi han cua mang");
+
         }
 
     }

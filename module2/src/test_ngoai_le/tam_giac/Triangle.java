@@ -30,25 +30,25 @@ public class Triangle {
                 System.out.println("Nhap so a");
                 int a = scanner.nextInt();
                 if (a < 0){
-                    System.out.println("Please must input number");
+                    System.err.println("Please must input number");
                     break;
                 }
                 System.out.println("Nhap so b");
                 int b = scanner.nextInt();
                 if (a < 0){
-                    System.out.println("Please must input number");
+                    System.err.println("Please must input number");
                     break;
                 }
                 System.out.println("Nhap so c");
                 int c = scanner.nextInt();
                 if (a < 0){
-                    System.out.println("Please must input number");
+                    System.err.println("Please must input number");
                     break;
                 }
                 Triangle triangle = new Triangle(a,b,c);
                 triangle.inputNumber();
             } catch (InputMismatchException e){
-                System.out.println("please input number");
+                System.err.println("please input number");
                 scanner.nextLine();
             } catch (IllegalTriangleException e){
                 System.out.println(e.getMessage());

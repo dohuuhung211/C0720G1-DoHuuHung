@@ -1,7 +1,5 @@
 package Baitap.bai1;
 
-import java_collection_framework_12.thuc_hanh.thuc_hanh_03.Student;
-
 import java.util.*;
 
 public class Main {

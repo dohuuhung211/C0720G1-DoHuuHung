@@ -24,7 +24,7 @@ public class FileUtils {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null){
-                System.out.println(line);
+//                System.out.println(line);
                 stringList.add(line);
             }
             bufferedReader.close();

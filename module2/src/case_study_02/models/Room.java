@@ -19,14 +19,18 @@ public class Room extends Service{
 
     @Override
     public String showInfo() {
-        return "Villa{" +
-                "Ma dich vu: '" + code + '\'' +
-                ", Ten dich vu: '" + nameService + '\'' +
-                ", Dien tich: " + area +
-                ", Chi phi thue: " + pay +
-                ", So luong nguoi: " + quantity +
-                ", Kieu thue: '" + typeRent + '\'' +
-                ", Dich vu mien phi di kem: '" + servicesBonusFree + '\'' +
-                '}';
+        return this.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Room: " + "\n" +
+                "Ma dich vu: " + code + "\n" +
+                "Ten dich vu: " + nameService + "\n" +
+                "Dien tich: " + area + "\n" +
+                "Chi phi thue: " + pay + "\n" +
+                "So luong nguoi: " + quantity + "\n" +
+                "Kieu thue: " + typeRent + "\n" +
+                "Dich vu mien phi di kem: " + servicesBonusFree;
     }
 }

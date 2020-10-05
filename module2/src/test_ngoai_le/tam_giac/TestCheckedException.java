@@ -1,11 +1,8 @@
 package test_ngoai_le.tam_giac;
 
-import java_collection_framework_12.thuc_hanh.thuc_hanh_03.Student;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class TestCheckedException {
 

@@ -39,17 +39,20 @@ public class House extends Service {
 
     @Override
     public String showInfo() {
-        return "Villa{" +
-                "Ma dich vu: '" + code + '\'' +
-                ", Ten dich vu: '" + nameService + '\'' +
-                ", Tieu chuan phong: '" + standardRoom + '\'' +
-                ", Mo ta dich vu: '" + ortherFacilities + '\'' +
-                ", So luong tang: " + amountFloor +
-                ", Dien tich: " + area +
-                ", Chi phi thue: " + pay +
-                ", So luong nguoi: " + quantity +
-                ", Kieu thue: '" + typeRent + '\'' +
-                '}';
+        return this.toString();
     }
 
+    @Override
+    public String toString() {
+        return "House: " + "\n" +
+                "Ma dich vu: " + code + "\n" +
+                "Ten dich vu: " + nameService + "\n" +
+                "Tieu chuan phong: " + standardRoom + "\n" +
+                "Mo ta dich vu: " + ortherFacilities + "\n" +
+                "So luong tang: " + amountFloor + "\n" +
+                "Dien tich: " + area + "\n" +
+                "Chi phi thue: " + pay + "\n" +
+                "So luong nguoi: " + quantity + "\n" +
+                "Kieu thue: " + typeRent;
+    }
 }

@@ -47,20 +47,25 @@ public class Villa extends Service {
         this.amountFloor = amountFloor;
     }
 
+
     @Override
     public String showInfo() {
-        return "Villa{" +
-                "Ma dich vu: '" + code + '\'' +
-                ", Ten dich vu: '" + nameService + '\'' +
-                ", Tieu chuan phong: '" + standardRoom + '\'' +
-                ", Mo ta dich vu: '" + ortherFacilities + '\'' +
-                ", Dien tich ho boi: " + arePool +
-                ", So luong tang: " + amountFloor +
-                ", Dien tich: " + area +
-                ", Chi phi thue: " + pay +
-                ", So luong nguoi: " + quantity +
-                ", Kieu thue: '" + typeRent + '\'' +
-                '}';
+        return this.toString();
     }
 
+
+    @Override
+    public String toString() {
+        return "Villa: " + "\n" +
+                "Ma dich vu: " + code + "\n" +
+                "Ten dich vu: " + nameService + "\n" +
+                "Tieu chuan phong: " + standardRoom + "\n" +
+                "Mo ta dich vu: " + ortherFacilities + "\n" +
+                "Dien tich ho boi: " + arePool + "\n" +
+                "So luong tang: " + amountFloor + "\n" +
+                "Dien tich: " + area + "\n" +
+                "Chi phi thue: " + pay + "\n" +
+                "So luong nguoi: " + quantity + "\n" +
+                "Kieu thue: " + typeRent;
+    }
 }

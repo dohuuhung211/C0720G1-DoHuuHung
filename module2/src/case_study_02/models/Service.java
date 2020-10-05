@@ -66,4 +66,16 @@ public abstract class Service {
     }
 
     public abstract String showInfo();
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "Ma dich vu: '" + code + '\'' +
+                ", Ten dich vu: '" + nameService + '\'' +
+                ", Dien tich: " + area +
+                ", Gia tien: " + pay +
+                ", So luong: " + quantity +
+                ", Kieu thue: '" + typeRent + '\'' +
+                '}';
+    }
 }

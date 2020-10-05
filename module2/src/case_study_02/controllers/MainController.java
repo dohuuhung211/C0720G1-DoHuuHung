@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MainController {
+    static List<Villa> villaList = new ArrayList<>();
+    static List<House> houseList = new ArrayList<>();
+    static List<Room> roomList = new ArrayList<>();
     public static final String COMMA = ",";
     public static final String FILE_VILLA = "G:\\C0720G1_Do_Huu_Hung\\module2\\src\\case_study_02\\data\\Villa.csv";
     public static final String FILE_HOUSE = "G:\\C0720G1_Do_Huu_Hung\\module2\\src\\case_study_02\\data\\House.csv";
@@ -195,24 +198,71 @@ public class MainController {
         }
     }
     public static void showVilla(){
-        List<String> stringList = FileUtils.readFile(FILE_VILLA);
-        for (String x: stringList){
-            System.out.println(x);
+        for (Villa x: villaList){
+            System.out.println(x.showInfo());
         }
+        System.out.println("---------------------------------------------------");
+//        System.out.println("Thong tin khach hang thue dich vu Villa");
+//        List<String> stringList = FileUtils.readFile(FILE_VILLA);
+//        System.out.println("---------------------------------------------------");
     }
     public static void showHouse(){
-        List<String> stringList = FileUtils.readFile(FILE_HOUSE);
-        for (String x: stringList){
-            System.out.println(x);
+        for (House x: houseList){
+            System.out.println(x.showInfo());
         }
+        System.out.println("---------------------------------------------------");
+//        System.out.println("Thong tin khach hang thue dich vu House");
+//        List<String> stringList = FileUtils.readFile(FILE_HOUSE);
+//        System.out.println("---------------------------------------------------");
     }
     public static void showRoom(){
-        List<String> stringList = FileUtils.readFile(FILE_ROOM);
-        for (String x: stringList){
-            System.out.println(x);
+        for (Room x: roomList){
+            System.out.println(x.showInfo());
+        }
+        System.out.println("---------------------------------------------------");
+//        System.out.println("Thong tin khach hang thue dich vu Room");
+//        List<String> stringList = FileUtils.readFile(FILE_ROOM);
+//        System.out.println("---------------------------------------------------");
+    }
+    private static void readFileVilla() {
+        List<String> listLine = FileUtils.readFile(FILE_VILLA);
+        for (String line : listLine) {
+            String[] split = line.split(",");
+            if (split.length != 1) {
+                Villa villa = new Villa(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
+                        split[5], split[6], split[7], Double.parseDouble(split[8]), Integer.parseInt(split[9]));
+                villaList.add(villa);
+            }
+        }
+    }
+    private static void readFileHouse() {
+        List<String> listLine = FileUtils.readFile(FILE_HOUSE);
+        for (String line : listLine) {
+            String[] split = line.split(",");
+            if (split.length != 1) {
+                House house = new House(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
+                        split[5], split[6], split[7], Integer.parseInt(split[8]));
+                houseList.add(house);
+            }
+        }
+    }
+//    String code, String nameService, double area, double pay,
+//    int quantity, String typeRent, String servicesBonusFree
+    private static void readFileRoom() {
+        List<String> listLine = FileUtils.readFile(FILE_ROOM);
+        for (String line : listLine) {
+            String[] split = line.split(",");
+            if (split.length != 1) {
+                Room room = new Room(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
+                        split[5], split[6]);
+                roomList.add(room);
+            }
         }
     }
     public static void main(String[] args) {
+        readFileVilla();
+        readFileHouse();
+        readFileRoom();
         displayMainMenu();
     }
 }

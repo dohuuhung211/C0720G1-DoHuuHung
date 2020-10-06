@@ -12,7 +12,6 @@ public class ValidateNameClass {
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }
-
     public static void main(String[] args) {
         String input = scanner.nextLine();
         if (validate(input)){

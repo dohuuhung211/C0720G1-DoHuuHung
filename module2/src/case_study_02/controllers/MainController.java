@@ -8,6 +8,10 @@ import case_study_02.models.Villa;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static case_study_02.controllers.Validate.*;
 
 public class MainController {
     static List<Villa> villaList = new ArrayList<>();
@@ -82,26 +86,59 @@ public class MainController {
         }
     }
     public static void addServiceVilla(){
+
         System.out.println("Ma dich vu");
         String code = scanner.nextLine();
+        while (!validCodeVilla(code)){
+            System.err.println("Ma khong dung dinh dang, moi nhap lai");
+            code = scanner.nextLine();
+        }
         System.out.println("Ten dich vu");
         String nameService = scanner.nextLine();
+        while (!validNameService(nameService)){
+            System.err.println("Ten dich vu phai viet hoa chu cai dau");
+            nameService = scanner.nextLine();
+        }
         System.out.println("Dien tich");
         String area = scanner.nextLine();
+        while (!validArea(area)){
+            System.err.println("Dien tich phai lon hon 30");
+            area = scanner.nextLine();
+        }
         System.out.println("Chi phi thue");
         String pay = scanner.nextLine();
+        while (!validPay(pay)){
+            System.err.println("Nhap khong dung dinh dang, moi nhap lai");
+            pay = scanner.nextLine();
+        }
         System.out.println("So luong khach");
         String quantity = scanner.nextLine();
+        while (!validMaxQuantity(quantity)){
+            System.err.println("So luong khong dung dinh dang");
+            quantity = scanner.nextLine();
+        }
         System.out.println("Kieu thue");
         String typeRent = scanner.nextLine();
         System.out.println("Tieu chuan phong");
         String standardRoom = scanner.nextLine();
         System.out.println("Mo ta dich vu");
         String ortherFacilities = scanner.nextLine();
+        while (!validService(ortherFacilities)){
+            System.err.println("Dich vu khong nam trong danh sach, moi nhap lai");
+            ortherFacilities = scanner.nextLine();
+        }
         System.out.println("Dien tich ho boi");
         String areaPool = scanner.nextLine();
+        while (!validArea(areaPool)){
+            System.err.println("Dien tich phai lon hon 30");
+            areaPool = scanner.nextLine();
+        }
         System.out.println("So Tang");
         String amountFloor = scanner.nextLine();
+        while (!validFloor(amountFloor)){
+            System.out.println("Nhap khong dung so tang");
+            amountFloor = scanner.nextLine();
+        }
 //        Villa villa = new Villa(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
 //                Integer.parseInt(quantity), typeRent, standardRoom, ortherFacilities,
 //                Double.parseDouble(areaPool), Integer.parseInt(amountFloor));
@@ -114,12 +151,28 @@ public class MainController {
     public static void addServiceHouse(){
         System.out.println("Ma dich vu");
         String code = scanner.nextLine();
+        while (!validCodeHouse(code)){
+            System.err.println("Ma khong dung dinh dang, moi nhap lai");
+            code = scanner.nextLine();
+        }
         System.out.println("Ten dich vu");
         String nameService = scanner.nextLine();
+        while (!validNameService(nameService)){
+            System.err.println("Ten dich vu phai viet hoa chu cai dau");
+            nameService = scanner.nextLine();
+        }
         System.out.println("Dien tich");
         String area = scanner.nextLine();
+        while (!validArea(area)){
+            System.err.println("Dien tich phai lon hon 30");
+            area = scanner.nextLine();
+        }
         System.out.println("Chi phi thue");
         String pay = scanner.nextLine();
+        while (!validPay(pay)){
+            System.err.println("Nhap khong dung dinh dang, moi nhap lai");
+            pay = scanner.nextLine();
+        }
         System.out.println("So luong khach");
         String quantity = scanner.nextLine();
         System.out.println("Kieu thue");
@@ -128,6 +181,10 @@ public class MainController {
         String standardRoom = scanner.nextLine();
         System.out.println("Mo ta dich vu");
         String ortherFacilities = scanner.nextLine();
+        while (!validService(ortherFacilities)){
+            System.err.println("Dich vu khong co trong danh sach, moi nhap lai");
+            ortherFacilities = scanner.nextLine();
+        }
         System.out.println("So Tang");
         String amountFloor = scanner.nextLine();
 //        House house = new House(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
@@ -141,12 +198,28 @@ public class MainController {
     public static void addServiceRoom(){
         System.out.println("Ma dich vu");
         String code = scanner.nextLine();
+        while (!validCodeRoom(code)){
+            System.err.println("Ma khong dung dinh dang, moi nhap lai");
+            code = scanner.nextLine();
+        }
         System.out.println("Ten dich vu");
         String nameService = scanner.nextLine();
+        while (!validNameService(nameService)){
+            System.err.println("Ten dich vu phai viet hoa chu cai dau");
+            nameService = scanner.nextLine();
+        }
         System.out.println("Dien tich");
         String area = scanner.nextLine();
+        while (!validArea(area)){
+            System.err.println("Dien tich phai lon hon 30");
+            area = scanner.nextLine();
+        }
         System.out.println("Chi phi thue");
         String pay = scanner.nextLine();
+        while (!validPay(pay)){
+            System.err.println("Nhap khong dung dinh dang, moi nhap lai");
+            pay = scanner.nextLine();
+        }
         System.out.println("So luong khach");
         String quantity = scanner.nextLine();
         System.out.println("Kieu thue");
@@ -259,6 +332,8 @@ public class MainController {
             }
         }
     }
+
+
     public static void main(String[] args) {
         readFileVilla();
         readFileHouse();

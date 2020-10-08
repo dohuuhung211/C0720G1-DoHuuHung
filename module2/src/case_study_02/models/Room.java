@@ -1,7 +1,7 @@
 package case_study_02.models;
 
-public class Room extends Service{
-    String servicesBonusFree;
+public class Room extends Service implements Comparable<Room>{
+    Object servicesBonusFree;
 
     public Room(String code, String nameService, double area, double pay,
                 int quantity, String typeRent, String servicesBonusFree) {
@@ -9,11 +9,11 @@ public class Room extends Service{
         this.servicesBonusFree = servicesBonusFree;
     }
 
-    public String getServicesBonusFree() {
+    public Object getServicesBonusFree() {
         return servicesBonusFree;
     }
 
-    public void setServicesBonusFree(String servicesBonusFree) {
+    public void setServicesBonusFree(Object servicesBonusFree) {
         this.servicesBonusFree = servicesBonusFree;
     }
 
@@ -32,5 +32,10 @@ public class Room extends Service{
                 "So luong nguoi: " + quantity + "\n" +
                 "Kieu thue: " + typeRent + "\n" +
                 "Dich vu mien phi di kem: " + servicesBonusFree;
+    }
+
+    @Override
+    public int compareTo(Room room) {
+        return this.getNameService().compareTo(room.getNameService());
     }
 }

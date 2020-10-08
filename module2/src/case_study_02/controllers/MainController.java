@@ -1,5 +1,6 @@
 package case_study_02.controllers;
 
+import _12_java_collection_framework.thuc_hanh.optional.Tree;
 import case_study_02.commons.FileUtils;
 import case_study_02.models.House;
 import case_study_02.models.Room;
@@ -8,8 +9,10 @@ import case_study_02.models.Villa;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 import static case_study_02.controllers.AddCustomer.*;
+import static case_study_02.controllers.Booking.addNewBook;
 import static case_study_02.controllers.ValidateService.*;
 
 public class MainController {
@@ -34,27 +37,25 @@ public class MainController {
         switch (input){
             case 1:
                 addService();
-                displayMainMenu();
                 break;
             case 2:
                 showServices();
-                displayMainMenu();
                 break;
             case 3:
                 addNewCustomer();
-                displayMainMenu();
                 break;
             case 4:
                 showInforCustomer();
-                displayMainMenu();
                 break;
             case 5:
+                addNewBook();
                 break;
             case 6:
                 break;
             case 7:
                 System.exit(7);
         }
+        displayMainMenu();
     }
     public static void addService(){
         System.out.println("1. Them dich vu Villa \n" +
@@ -67,15 +68,12 @@ public class MainController {
         switch (input) {
             case 1:
                 addServiceVilla();
-                displayMainMenu();
                 break;
             case 2:
                 addServiceHouse();
-                displayMainMenu();
                 break;
             case 3:
                 addServiceRoom();
-                displayMainMenu();
                 break;
             case 4:
                 displayMainMenu();
@@ -87,6 +85,7 @@ public class MainController {
                 System.out.println("Vui long chon lai menu");
                 displayMainMenu();
         }
+        displayMainMenu();
     }
     public static void addServiceVilla(){
 
@@ -292,10 +291,13 @@ public class MainController {
                 showRoom();
                 break;
             case 4:
+                showVillaNotDup();
                 break;
             case 5:
+                showHouseNotDup();
                 break;
             case 6:
+                showRoomNotDup();
                 break;
             case 7:
                 displayMainMenu();
@@ -305,8 +307,9 @@ public class MainController {
         }
     }
     public static void showVilla(){
+        int i = 1;
         for (Villa x: villaList){
-            System.out.println(x.showInfo());
+            System.out.println(i++ + ". " + x.showInfo());
             System.out.println("---------------------------------------------------");
         }
 //        System.out.println("Thong tin khach hang thue dich vu Villa");
@@ -314,8 +317,9 @@ public class MainController {
 //        System.out.println("---------------------------------------------------");
     }
     public static void showHouse(){
+        int i = 1;
         for (House x: houseList){
-            System.out.println(x.showInfo());
+            System.out.println(i++ + ". " + x.showInfo());
             System.out.println("---------------------------------------------------");
         }
 //        System.out.println("Thong tin khach hang thue dich vu House");
@@ -323,13 +327,44 @@ public class MainController {
 //        System.out.println("---------------------------------------------------");
     }
     public static void showRoom(){
+        int i = 1;
         for (Room x: roomList){
-            System.out.println(x.showInfo());
+            System.out.println(i++ + ". " + x.showInfo());
             System.out.println("---------------------------------------------------");
         }
 //        System.out.println("Thong tin khach hang thue dich vu Room");
 //        List<String> stringList = FileUtils.readFile(FILE_ROOM);
 //        System.out.println("---------------------------------------------------");
+    }
+    public static void showVillaNotDup(){
+        TreeSet<Villa> villaTree = new TreeSet<>();
+        for (Villa x: villaList){
+            villaTree.add(x);
+        }
+        for (Villa x: villaTree){
+            System.out.println(x);
+        }
+        System.out.println("----------------------------------------------------");
+    }
+    public static void showHouseNotDup(){
+        TreeSet<House> houseTree = new TreeSet<>();
+        for (House x: houseList){
+            houseTree.add(x);
+        }
+        for (House x: houseTree){
+            System.out.println(x);
+        }
+        System.out.println("----------------------------------------------------");
+    }
+    public static void showRoomNotDup(){
+        TreeSet<Room> roomTree = new TreeSet<>();
+        for (Room x: roomList){
+            roomTree.add(x);
+        }
+        for (Room x: roomTree){
+            System.out.println(x);
+        }
+        System.out.println("----------------------------------------------------");
     }
     private static void readFileVilla() {
         List<String> listLine = FileUtils.readFile(FILE_VILLA);

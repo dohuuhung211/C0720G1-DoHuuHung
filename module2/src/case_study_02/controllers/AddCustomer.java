@@ -117,8 +117,9 @@ public class AddCustomer {
     public static void showInforCustomer(){
         System.out.println("Thong tin khach hang");
         Collections.sort(listCustomer);
+        int i = 1;
         for (Customer x: listCustomer){
-            System.out.println(x.showInfo());
+            System.out.println(i++ + ". " + x.showInfo());
             System.out.println("--------------------------------------------------");
         }
     }

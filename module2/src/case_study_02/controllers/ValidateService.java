@@ -41,7 +41,7 @@ public class ValidateService {
         return matcher.find();
     }
     public static boolean validFloor(String regex){
-        final String REGEX_FLOOR = "^[1-3]{1}\\d$";
+        final String REGEX_FLOOR = "^([1-9]|[1-2][\\d])$";
         Pattern pattern = Pattern.compile(REGEX_FLOOR);
         Matcher matcher = pattern.matcher(regex);
         return matcher.find();

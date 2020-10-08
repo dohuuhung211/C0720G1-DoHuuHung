@@ -69,13 +69,12 @@ public abstract class Service {
 
     @Override
     public String toString() {
-        return "Service{" +
-                "Ma dich vu: '" + code + '\'' +
-                ", Ten dich vu: '" + nameService + '\'' +
-                ", Dien tich: " + area +
-                ", Gia tien: " + pay +
-                ", So luong: " + quantity +
-                ", Kieu thue: '" + typeRent + '\'' +
-                '}';
+        return "Service:" +
+                "Ma dich vu: " + code + "\n" +
+                "Ten dich vu: " + nameService + "\n" +
+                "Dien tich: " + area + "\n" +
+                "Gia tien: " + pay + "\n" +
+                "So luong: " + quantity + "\n" +
+                "Kieu thue: " + typeRent;
     }
 }

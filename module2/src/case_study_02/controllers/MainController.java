@@ -8,10 +8,9 @@ import case_study_02.models.Villa;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import static case_study_02.controllers.Validate.*;
+import static case_study_02.controllers.AddCustomer.*;
+import static case_study_02.controllers.ValidateService.*;
 
 public class MainController {
     static List<Villa> villaList = new ArrayList<>();
@@ -42,8 +41,12 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 3:
+                addNewCustomer();
+                displayMainMenu();
                 break;
             case 4:
+                showInforCustomer();
+                displayMainMenu();
                 break;
             case 5:
                 break;
@@ -119,8 +122,16 @@ public class MainController {
         }
         System.out.println("Kieu thue");
         String typeRent = scanner.nextLine();
+        while (!validTypeRent(typeRent)){
+            System.err.println("Phai theo tieu chuan thue: Theo ngay/ Theo thang/ Theo nam");
+            typeRent = scanner.nextLine();
+        }
         System.out.println("Tieu chuan phong");
         String standardRoom = scanner.nextLine();
+        while(!validStandard(standardRoom)){
+            System.err.println("Nhap chua dung dinh dang, vui long nhap lai");
+            standardRoom = scanner.nextLine();
+        }
         System.out.println("Mo ta dich vu");
         String ortherFacilities = scanner.nextLine();
         while (!validService(ortherFacilities)){
@@ -139,12 +150,13 @@ public class MainController {
             System.out.println("Nhap khong dung so tang");
             amountFloor = scanner.nextLine();
         }
-//        Villa villa = new Villa(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
-//                Integer.parseInt(quantity), typeRent, standardRoom, ortherFacilities,
-//                Double.parseDouble(areaPool), Integer.parseInt(amountFloor));
+        Villa villa = new Villa(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
+                Integer.parseInt(quantity), typeRent, standardRoom, ortherFacilities,
+                Double.parseDouble(areaPool), Integer.parseInt(amountFloor));
         String line = code + COMMA + nameService + COMMA + area + COMMA + pay + COMMA + quantity +
                 COMMA + typeRent + COMMA + standardRoom + COMMA + ortherFacilities + COMMA + areaPool + COMMA + amountFloor;
         FileUtils.writeFile(FILE_VILLA, line);
+        villaList.add(villa);
         System.out.println("Them dich vu thanh cong");
         System.out.println("---------------------------------------------------");
     }
@@ -175,10 +187,22 @@ public class MainController {
         }
         System.out.println("So luong khach");
         String quantity = scanner.nextLine();
+        while (!validMaxQuantity(quantity)){
+            System.err.println("So luong khong dung dinh dang");
+            quantity = scanner.nextLine();
+        }
         System.out.println("Kieu thue");
         String typeRent = scanner.nextLine();
+        while (!validTypeRent(typeRent)){
+            System.err.println("Phai theo tieu chuan thue: Theo ngay/ Theo thang/ Theo nam");
+            typeRent = scanner.nextLine();
+        }
         System.out.println("Tieu chuan phong");
         String standardRoom = scanner.nextLine();
+        while(!validStandard(standardRoom)){
+            System.err.println("Nhap chua dung dinh dang, vui long nhap lai");
+            standardRoom = scanner.nextLine();
+        }
         System.out.println("Mo ta dich vu");
         String ortherFacilities = scanner.nextLine();
         while (!validService(ortherFacilities)){
@@ -187,11 +211,12 @@ public class MainController {
         }
         System.out.println("So Tang");
         String amountFloor = scanner.nextLine();
-//        House house = new House(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
-//                Integer.parseInt(quantity), typeRent, standardRoom, ortherFacilities, Integer.parseInt(amountFloor));
+        House house = new House(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
+                Integer.parseInt(quantity), typeRent, standardRoom, ortherFacilities, Integer.parseInt(amountFloor));
         String line = code + COMMA + nameService + COMMA + area + COMMA + pay + COMMA + quantity +
                 COMMA + typeRent + COMMA + standardRoom + COMMA + ortherFacilities + COMMA + amountFloor;
         FileUtils.writeFile(FILE_HOUSE, line);
+        houseList.add(house);
         System.out.println("Them dich vu thanh cong");
         System.out.println("---------------------------------------------------");
     }
@@ -222,15 +247,24 @@ public class MainController {
         }
         System.out.println("So luong khach");
         String quantity = scanner.nextLine();
+        while (!validMaxQuantity(quantity)){
+            System.err.println("So luong khong dung dinh dang");
+            quantity = scanner.nextLine();
+        }
         System.out.println("Kieu thue");
         String typeRent = scanner.nextLine();
+        while (!validTypeRent(typeRent)){
+            System.err.println("Phai theo tieu chuan thue: Theo ngay/ Theo thang/ Theo nam");
+            typeRent = scanner.nextLine();
+        }
         System.out.println("Dich vu mien phi kem theo");
         String servicesBonusFree = scanner.nextLine();
-//        Room room = new Room(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
-//                Integer.parseInt(quantity), typeRent, servicesBonusFree);
+        Room room = new Room(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
+                Integer.parseInt(quantity), typeRent, servicesBonusFree);
         String line = code + COMMA + nameService + COMMA + area + COMMA + pay + COMMA + quantity +
                 COMMA + typeRent + COMMA + servicesBonusFree;
         FileUtils.writeFile(FILE_ROOM, line);
+        roomList.add(room);
         System.out.println("Them dich vu thanh cong");
         System.out.println("---------------------------------------------------");
     }
@@ -273,8 +307,8 @@ public class MainController {
     public static void showVilla(){
         for (Villa x: villaList){
             System.out.println(x.showInfo());
+            System.out.println("---------------------------------------------------");
         }
-        System.out.println("---------------------------------------------------");
 //        System.out.println("Thong tin khach hang thue dich vu Villa");
 //        List<String> stringList = FileUtils.readFile(FILE_VILLA);
 //        System.out.println("---------------------------------------------------");
@@ -282,8 +316,8 @@ public class MainController {
     public static void showHouse(){
         for (House x: houseList){
             System.out.println(x.showInfo());
+            System.out.println("---------------------------------------------------");
         }
-        System.out.println("---------------------------------------------------");
 //        System.out.println("Thong tin khach hang thue dich vu House");
 //        List<String> stringList = FileUtils.readFile(FILE_HOUSE);
 //        System.out.println("---------------------------------------------------");
@@ -291,8 +325,8 @@ public class MainController {
     public static void showRoom(){
         for (Room x: roomList){
             System.out.println(x.showInfo());
+            System.out.println("---------------------------------------------------");
         }
-        System.out.println("---------------------------------------------------");
 //        System.out.println("Thong tin khach hang thue dich vu Room");
 //        List<String> stringList = FileUtils.readFile(FILE_ROOM);
 //        System.out.println("---------------------------------------------------");
@@ -338,6 +372,7 @@ public class MainController {
         readFileVilla();
         readFileHouse();
         readFileRoom();
+        readFileCustomer();
         displayMainMenu();
     }
 }

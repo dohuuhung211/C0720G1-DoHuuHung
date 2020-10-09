@@ -13,6 +13,7 @@ import java.util.TreeSet;
 
 import static case_study_02.controllers.AddCustomer.*;
 import static case_study_02.controllers.Booking.addNewBook;
+import static case_study_02.controllers.Employee.showAllEmployee;
 import static case_study_02.controllers.ValidateService.*;
 
 public class MainController {
@@ -30,7 +31,7 @@ public class MainController {
                             "3. Them khach hang \n" +
                             "4. Hien thi thong tin khach hang \n" +
                             "5. Dat cho moi \n" +
-                            "6. Them thong tin nhan vien \n" +
+                            "6. Hien thi thong tin nhan vien \n" +
                             "7. Exit");
         int input = scanner.nextInt();
         scanner.nextLine();
@@ -51,6 +52,7 @@ public class MainController {
                 addNewBook();
                 break;
             case 6:
+                showAllEmployee();
                 break;
             case 7:
                 System.exit(7);
@@ -76,16 +78,13 @@ public class MainController {
                 addServiceRoom();
                 break;
             case 4:
-                displayMainMenu();
                 break;
             case 5:
                 System.exit(5);
                 break;
             default:
                 System.out.println("Vui long chon lai menu");
-                displayMainMenu();
         }
-        displayMainMenu();
     }
     public static void addServiceVilla(){
 
@@ -300,7 +299,6 @@ public class MainController {
                 showRoomNotDup();
                 break;
             case 7:
-                displayMainMenu();
                 break;
             case 8:
                 System.exit(8);
@@ -388,8 +386,6 @@ public class MainController {
             }
         }
     }
-//    String code, String nameService, double area, double pay,
-//    int quantity, String typeRent, String servicesBonusFree
     private static void readFileRoom() {
         List<String> listLine = FileUtils.readFile(FILE_ROOM);
         for (String line : listLine) {

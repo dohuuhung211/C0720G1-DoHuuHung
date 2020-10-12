@@ -1,19 +1,18 @@
 package case_study_02.models;
 
 public class Room extends Service implements Comparable<Room>{
-    Object servicesBonusFree;
+    BonusService servicesBonusFree;
 
-    public Room(String code, String nameService, double area, double pay,
-                int quantity, String typeRent, String servicesBonusFree) {
+    public Room(String code, String nameService, double area, double pay, int quantity, String typeRent, BonusService servicesBonusFree) {
         super(code, nameService, area, pay, quantity, typeRent);
         this.servicesBonusFree = servicesBonusFree;
     }
 
-    public Object getServicesBonusFree() {
+    public BonusService getServicesBonusFree() {
         return servicesBonusFree;
     }
 
-    public void setServicesBonusFree(Object servicesBonusFree) {
+    public void setServicesBonusFree(BonusService servicesBonusFree) {
         this.servicesBonusFree = servicesBonusFree;
     }
 

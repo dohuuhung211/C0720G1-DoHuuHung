@@ -2,6 +2,7 @@ package case_study_02.controllers;
 
 import _12_java_collection_framework.thuc_hanh.optional.Tree;
 import case_study_02.commons.FileUtils;
+import case_study_02.models.BonusService;
 import case_study_02.models.House;
 import case_study_02.models.Room;
 import case_study_02.models.Villa;
@@ -14,6 +15,7 @@ import java.util.TreeSet;
 import static case_study_02.controllers.AddCustomer.*;
 import static case_study_02.controllers.Booking.addNewBook;
 import static case_study_02.controllers.Employee.showAllEmployee;
+import static case_study_02.controllers.FilingCabinets.*;
 import static case_study_02.controllers.ValidateService.*;
 
 public class MainController {
@@ -32,7 +34,10 @@ public class MainController {
                             "4. Hien thi thong tin khach hang \n" +
                             "5. Dat cho moi \n" +
                             "6. Hien thi thong tin nhan vien \n" +
-                            "7. Exit");
+                            "7. Dat ve xem phim \n" +
+                            "8. Tu dung ho so nhan vien \n" +
+                            "9. Tim kiem ho so nhan vien \n" +
+                            "10. Exit");
         int input = scanner.nextInt();
         scanner.nextLine();
         switch (input){
@@ -55,7 +60,16 @@ public class MainController {
                 showAllEmployee();
                 break;
             case 7:
-                System.exit(7);
+                BookCinema.addTicket();
+                break;
+            case 8:
+                cabinet();
+                break;
+            case 9:
+                findCustomer();
+                break;
+            case 10:
+                System.exit(10);
         }
         displayMainMenu();
     }
@@ -252,15 +266,20 @@ public class MainController {
         System.out.println("Kieu thue");
         String typeRent = scanner.nextLine();
         while (!validTypeRent(typeRent)){
-            System.err.println("Phai theo tieu chuan thue: Theo ngay/ Theo thang/ Theo nam");
+            System.err.println("Phai theo tieu chuan thue: Theo ngay/ Theo tuan/ Theo nam");
             typeRent = scanner.nextLine();
         }
         System.out.println("Dich vu mien phi kem theo");
-        String servicesBonusFree = scanner.nextLine();
+        String bonusService = scanner.nextLine();
+        BonusService servicesBonusFree = null;
+        while (!validBonusService(bonusService)){
+            System.out.println("Chi co 3 dich vu di kem: Karaoke/Massage/Tour");
+            bonusService = scanner.nextLine();
+        }
         Room room = new Room(code, nameService, Double.parseDouble(area), Double.parseDouble(pay),
-                Integer.parseInt(quantity), typeRent, servicesBonusFree);
+                Integer.parseInt(quantity), typeRent, new BonusService(bonusService));
         String line = code + COMMA + nameService + COMMA + area + COMMA + pay + COMMA + quantity +
-                COMMA + typeRent + COMMA + servicesBonusFree;
+                COMMA + typeRent + COMMA + new BonusService(bonusService);
         FileUtils.writeFile(FILE_ROOM, line);
         roomList.add(room);
         System.out.println("Them dich vu thanh cong");
@@ -306,13 +325,10 @@ public class MainController {
     }
     public static void showVilla(){
         int i = 1;
-        for (Villa x: villaList){
-            System.out.println(i++ + ". " + x.showInfo());
+        for (Villa list: villaList){
+            System.out.println(i++ + ". " + list.showInfo());
             System.out.println("---------------------------------------------------");
         }
-//        System.out.println("Thong tin khach hang thue dich vu Villa");
-//        List<String> stringList = FileUtils.readFile(FILE_VILLA);
-//        System.out.println("---------------------------------------------------");
     }
     public static void showHouse(){
         int i = 1;
@@ -320,47 +336,41 @@ public class MainController {
             System.out.println(i++ + ". " + x.showInfo());
             System.out.println("---------------------------------------------------");
         }
-//        System.out.println("Thong tin khach hang thue dich vu House");
-//        List<String> stringList = FileUtils.readFile(FILE_HOUSE);
-//        System.out.println("---------------------------------------------------");
     }
     public static void showRoom(){
         int i = 1;
-        for (Room x: roomList){
-            System.out.println(i++ + ". " + x.showInfo());
+        for (Room list: roomList){
+            System.out.println(i++ + ". " + list.showInfo());
             System.out.println("---------------------------------------------------");
         }
-//        System.out.println("Thong tin khach hang thue dich vu Room");
-//        List<String> stringList = FileUtils.readFile(FILE_ROOM);
-//        System.out.println("---------------------------------------------------");
     }
     public static void showVillaNotDup(){
         TreeSet<Villa> villaTree = new TreeSet<>();
-        for (Villa x: villaList){
-            villaTree.add(x);
+        for (Villa list: villaList){
+            villaTree.add(list);
         }
-        for (Villa x: villaTree){
-            System.out.println(x);
+        for (Villa list: villaTree){
+            System.out.println(list);
         }
         System.out.println("----------------------------------------------------");
     }
     public static void showHouseNotDup(){
         TreeSet<House> houseTree = new TreeSet<>();
-        for (House x: houseList){
-            houseTree.add(x);
+        for (House list: houseList){
+            houseTree.add(list);
         }
-        for (House x: houseTree){
-            System.out.println(x);
+        for (House list: houseTree){
+            System.out.println(list);
         }
         System.out.println("----------------------------------------------------");
     }
     public static void showRoomNotDup(){
         TreeSet<Room> roomTree = new TreeSet<>();
-        for (Room x: roomList){
-            roomTree.add(x);
+        for (Room list: roomList){
+            roomTree.add(list);
         }
-        for (Room x: roomTree){
-            System.out.println(x);
+        for (Room list: roomTree){
+            System.out.println(list);
         }
         System.out.println("----------------------------------------------------");
     }
@@ -392,7 +402,7 @@ public class MainController {
             String[] split = line.split(",");
             if (split.length != 1) {
                 Room room = new Room(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
-                        split[5], split[6]);
+                        split[5], new BonusService(split[6]));
                 roomList.add(room);
             }
         }

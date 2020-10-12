@@ -118,8 +118,8 @@ public class AddCustomer {
         System.out.println("Thong tin khach hang");
         Collections.sort(listCustomer);
         int i = 1;
-        for (Customer x: listCustomer){
-            System.out.println(i++ + ". " + x.showInfo());
+        for (Customer list: listCustomer){
+            System.out.println(i++ + ". " + list.showInfo());
             System.out.println("--------------------------------------------------");
         }
     }

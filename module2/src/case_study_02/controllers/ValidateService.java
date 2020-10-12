@@ -65,9 +65,14 @@ public class ValidateService {
         return matcher.find();
     }
     public static boolean validTypeRent(String regex){
-        final String REGEX_MAX_QUANTITY = "^(Theo ngay|Theo ngày|Theo tuan|Theo tuần|Theo nam|Theo năm)$";
-//        final String REGEX_MAX_QUANTITY = "[T-t]heo ng[ay-ày]|[T-t]heo tu[an-ần]|[T-t]heo n[am-ăm]";
+        final String REGEX_MAX_QUANTITY = "^([T-t]heo ngay|[T-t]heo ngày|[T-t]heo tuan|[T-t]heo tuần|[T-t]heo nam|[T-t]heo năm)$";
         Pattern pattern = Pattern.compile(REGEX_MAX_QUANTITY);
+        Matcher matcher = pattern.matcher(regex);
+        return matcher.find();
+    }
+    public static boolean validBonusService(String regex){
+        final String REGEX_BONUS_SERVICE = "^([K-k]araoke|[M-m]assage|[T-t]our)$";
+        Pattern pattern = Pattern.compile(REGEX_BONUS_SERVICE);
         Matcher matcher = pattern.matcher(regex);
         return matcher.find();
     }

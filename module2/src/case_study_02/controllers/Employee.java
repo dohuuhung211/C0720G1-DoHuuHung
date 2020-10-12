@@ -10,15 +10,27 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Employee {
+    static List<Employee> employeeList = new ArrayList<>();
+    static TreeMap<String,Employee> map = new TreeMap<>();
     static final String FILE_EMPLOYEE = "G:\\C0720G1_Do_Huu_Hung\\module2\\src\\case_study_02\\data\\Employee.csv";
+    String id;
     String name;
     int yearOld;
     String address;
     public Employee(){}
-    public Employee(String name, int yearOld, String address) {
+    public Employee(String id, String name, int yearOld, String address) {
+        this.id = id;
         this.name = name;
         this.yearOld = yearOld;
         this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -47,39 +59,27 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", yearOld=" + yearOld +
-                ", address='" + address + '\'' +
-                '}';
+        return "Ho Ten: " + name +
+                ", tuoi: " + yearOld +
+                ", dia chi: " + address;
     }
 
     public static void showAllEmployee() {
-        TreeMap<String,Employee> map = new TreeMap<>();
-        List<Employee> employeeList = new ArrayList<>();
         List<String> stringList = FileUtils.readFile(FILE_EMPLOYEE);
         for (String x: stringList){
             String[] split = x.split(",");
             if (split.length != 1){
-                Employee employee = new Employee(split[0],Integer.parseInt(split[1]),split[2]);
+                Employee employee = new Employee(split[0],split[1],Integer.parseInt(split[2]),split[3]);
                 employeeList.add(employee);
             }
         }
-        map.put("001",employeeList.get(0));
-        map.put("002",employeeList.get(1));
-        map.put("003",employeeList.get(2));
-        map.put("004",employeeList.get(3));
-        map.put("005",employeeList.get(4));
-        map.put("006",employeeList.get(5));
-        map.put("007",employeeList.get(6));
-        map.put("008",employeeList.get(7));
-        map.put("009",employeeList.get(8));
-        map.put("010",employeeList.get(9));
-        for(Map.Entry<String, Employee> x : map.entrySet()){
-            System.out.println(x.toString());
+        for (int i = 0; i < employeeList.size(); i++){
+            map.put(employeeList.get(i).getId(),employeeList.get(i));
         }
-    }
-    public static void main(String[] args) {
 
+        for(Map.Entry<String, Employee> employeeEntry : map.entrySet()){
+            System.out.println("Ma nhan vien: " + employeeEntry.getKey() + ", " + employeeEntry.getValue().toString());
+        }
+        System.out.println("---------------------------------------------------------");
     }
 }

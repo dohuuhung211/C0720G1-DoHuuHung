@@ -9,7 +9,7 @@ public class MainClass {
 //        productManager.removeProduct();
         productManager.sortByComparator();
         productManager.printList();
-//        productManager.findProduct();
+        productManager.findProduct();
 //        productManager.editProduct();
 
     }

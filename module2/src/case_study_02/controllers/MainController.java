@@ -28,50 +28,56 @@ public class MainController {
     public static final String FILE_ROOM = "G:\\C0720G1_Do_Huu_Hung\\module2\\src\\case_study_02\\data\\Room.csv";
     static Scanner scanner = new Scanner(System.in);
     public static void displayMainMenu(){
-        System.out.println("1. Them dich vu \n" +
-                            "2. Hien thi dich vu \n" +
-                            "3. Them khach hang \n" +
-                            "4. Hien thi thong tin khach hang \n" +
-                            "5. Dat cho moi \n" +
-                            "6. Hien thi thong tin nhan vien \n" +
-                            "7. Dat ve xem phim \n" +
-                            "8. Tu dung ho so nhan vien \n" +
-                            "9. Tim kiem ho so nhan vien \n" +
-                            "10. Exit");
-        int input = scanner.nextInt();
-        scanner.nextLine();
-        switch (input){
-            case 1:
-                addService();
-                break;
-            case 2:
-                showServices();
-                break;
-            case 3:
-                addNewCustomer();
-                break;
-            case 4:
-                showInforCustomer();
-                break;
-            case 5:
-                addNewBook();
-                break;
-            case 6:
-                showAllEmployee();
-                break;
-            case 7:
-                BookCinema.addTicket();
-                break;
-            case 8:
-                cabinet();
-                break;
-            case 9:
-                findCustomer();
-                break;
-            case 10:
-                System.exit(10);
-        }
-        displayMainMenu();
+        int input;
+
+        do {
+            System.out.println("1. Them dich vu \n" +
+                    "2. Hien thi dich vu \n" +
+                    "3. Them khach hang \n" +
+                    "4. Hien thi thong tin khach hang \n" +
+                    "5. Dat cho moi \n" +
+                    "6. Hien thi thong tin nhan vien \n" +
+                    "7. Dat ve xem phim \n" +
+                    "8. Tu dung ho so nhan vien \n" +
+                    "9. Tim kiem ho so nhan vien \n" +
+                    "10. Exit");
+            input = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (input){
+                case 1:
+                    addService();
+                    break;
+                case 2:
+                    showServices();
+                    break;
+                case 3:
+                    addNewCustomer();
+                    break;
+                case 4:
+                    showInforCustomer();
+                    break;
+                case 5:
+                    addNewBook();
+                    break;
+                case 6:
+                    showAllEmployee();
+                    break;
+                case 7:
+                    BookCinema.addTicket();
+                    break;
+                case 8:
+                    cabinet();
+                    break;
+                case 9:
+                    findIdEmployee();
+                    break;
+                case 10:
+                    System.exit(10);
+                default:
+                    displayMainMenu();
+            }
+        }while (input > 0 && input <= 10);
     }
     public static void addService(){
         System.out.println("1. Them dich vu Villa \n" +
@@ -332,8 +338,8 @@ public class MainController {
     }
     public static void showHouse(){
         int i = 1;
-        for (House x: houseList){
-            System.out.println(i++ + ". " + x.showInfo());
+        for (House list: houseList){
+            System.out.println(i++ + ". " + list.showInfo());
             System.out.println("---------------------------------------------------");
         }
     }
@@ -379,8 +385,8 @@ public class MainController {
         for (String line : listLine) {
             String[] split = line.split(",");
             if (split.length != 1) {
-                Villa villa = new Villa(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
-                        split[5], split[6], split[7], Double.parseDouble(split[8]), Integer.parseInt(split[9]));
+                Villa villa = new Villa(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]),
+                        Integer.parseInt(split[4]), split[5], split[6], split[7], Double.parseDouble(split[8]), Integer.parseInt(split[9]));
                 villaList.add(villa);
             }
         }
@@ -390,8 +396,8 @@ public class MainController {
         for (String line : listLine) {
             String[] split = line.split(",");
             if (split.length != 1) {
-                House house = new House(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
-                        split[5], split[6], split[7], Integer.parseInt(split[8]));
+                House house = new House(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]),
+                        Integer.parseInt(split[4]), split[5], split[6], split[7], Integer.parseInt(split[8]));
                 houseList.add(house);
             }
         }
@@ -401,8 +407,8 @@ public class MainController {
         for (String line : listLine) {
             String[] split = line.split(",");
             if (split.length != 1) {
-                Room room = new Room(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]), Integer.parseInt(split[4]),
-                        split[5], new BonusService(split[6]));
+                Room room = new Room(split[0], split[1], Double.parseDouble(split[2]), Double.parseDouble(split[3]),
+                        Integer.parseInt(split[4]), split[5], new BonusService(split[6]));
                 roomList.add(room);
             }
         }

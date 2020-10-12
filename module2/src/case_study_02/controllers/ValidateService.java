@@ -47,7 +47,7 @@ public class ValidateService {
         return matcher.find();
     }
     public static boolean validService(String regex){
-        final String REGEX_SERVICE = "^(massage|karaoke|car|drink|food)$";
+        final String REGEX_SERVICE = "^([M-m]assage|[K-k]araoke|[C-c]ar|[D-d]rink|[F-f]ood)$";
         Pattern pattern = Pattern.compile(REGEX_SERVICE);
         Matcher matcher = pattern.matcher(regex);
         return matcher.find();

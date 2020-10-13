@@ -32,11 +32,9 @@ public class Booking {
                 listCustomer.get(Integer.parseInt(chooseCustomer) - 1).setUseService(villaList.get(Integer.parseInt(chooseVilla) - 1));
                 addInforToFile(Integer.parseInt(chooseCustomer));
                 System.out.println("Dat lich thanh cong");
-                displayMainMenu();
                 break;
             case 2:
                 showRoom();
-                displayMainMenu();
                 break;
             case 3:
                 showRoom();

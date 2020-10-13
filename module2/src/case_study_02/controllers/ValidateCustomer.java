@@ -23,10 +23,11 @@ public class ValidateCustomer {
         final String REGEX_IDCARD = "^\\d{9}$";
         Pattern pattern = Pattern.compile(REGEX_IDCARD);
         Matcher matcher = pattern.matcher(regex);
+
         if (!matcher.find()) throw new IdCardException("Chung minh nhan dan phai dung 9 so");
     }
     public static void validBirthday(String regex) throws BirthDayException {
-        final String REGEX_BIRTHDAY = "^\\d{1,2}[./-]\\d{1,2}[./-](19(\\d[1-9]|[1-9]\\d)|200[0-1-2])$";
+        final String REGEX_BIRTHDAY = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[./-](19(\\d[1-9]|[1-9]\\d)|200[0-1])$";
         Pattern pattern = Pattern.compile(REGEX_BIRTHDAY);
         Matcher matcher = pattern.matcher(regex);
         if (!matcher.find()) throw new BirthDayException("Ngay sinh khong dung dinh dang");

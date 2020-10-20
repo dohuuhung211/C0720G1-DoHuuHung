@@ -32,16 +32,26 @@
 //        throw new Error();
 //    }
 //}
-public class Test {
+class Resource{
+    public String toString(){
+        return "a";
+    }
+}
+class Human extends Resource{
+    public String toString(){
+        return "b";
+    }
+}
+class Human2 extends Resource{
+    public String toString(){
+        return "c";
+    }
+}
+class Main{
     public static void main(String[] args) {
-        try {
-            int x = 0;
-            int y = 5 / x;
-        }catch (ArithmeticException e) {
-            System.out.println("Arithmetic");
-        }catch (Exception ae) {
-            System.out.println("Exception");
-        }
-        System.out.println("finished");
+        Human n = new Human();
+        Resource n2 = n;
+        Resource n3 = (Resource) n2;
+        System.out.println(n+"." + n2+"." + n3);
     }
 }

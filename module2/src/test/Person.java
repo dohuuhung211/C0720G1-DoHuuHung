@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Scanner;
+
 public class Person {
     public String ten;
     public Person(String ten){
@@ -18,4 +20,20 @@ public class Person {
         return this.ten + " khung";
     }
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean flag = false;
+        int a;
+        while(!flag){
+            a = scanner.nextInt();
+            if (a == 5){
+                System.out.println("ok");
+                flag = true;
+            } else {
+                System.out.println("Ng");
+                flag = false;
+            }
+        }
+        System.out.println(flag);
+    }
 }

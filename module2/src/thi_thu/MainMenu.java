@@ -160,29 +160,35 @@ public class MainMenu {
         String input = scanner.nextLine();
         switch (input){
             case "1":
-                System.out.println("Nhap id can tim");
-                int id = scanner.nextInt();
-                for (Student student: studentList){
-                    if (student.getId() == id){
-                        System.out.println(student);
-                        flag = true;
+                while (!flag){
+                    System.out.println("Nhap id can tim");
+                    int id = scanner.nextInt();
+                    for (Student student : studentList) {
+                        if (student.getId() == id) {
+                            System.out.println(student);
+                            flag = true;
+                        }
                     }
-                }
-                if (!flag){
-                    System.out.println("Id khong ton tai");
+                    if (!flag) {
+                        System.out.println("Id khong ton tai, moi nhap lai");
+                        flag = false;
+                    }
                 }
                 break;
             case "2":
-                System.out.println("Nhap ten sinh vien can tim");
-                String name = scanner.nextLine();
-                for (Student student: studentList){
-                    if (student.getName().contains(name)){
-                        System.out.println(student);
-                        flag = true;
+                while (!flag){
+                    System.out.println("Nhap ten sinh vien can tim");
+                    String name = scanner.nextLine();
+                    for (Student student: studentList){
+                        if (student.getName().contains(name)){
+                            System.out.println(student);
+                            flag = true;
+                        }
                     }
-                }
-                if (!flag){
-                    System.out.println("Ten sinh vien khong co trong danh sach");
+                    if (!flag){
+                        System.out.println("Ten sinh vien khong co trong danh sach, moi nhap lai");
+                        flag = false;
+                    }
                 }
                 break;
             case "3":

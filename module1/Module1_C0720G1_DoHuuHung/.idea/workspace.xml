@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="550e3c44-43d0-42ab-abdf-07d08b813529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/AddCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/ValidateCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/data/Customer.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/exception/BirthDayException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/exception/EmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/exception/GenderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/exception/IdCardException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/exception/NameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/models/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/Module2/case_study_02/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/out/production/Module2/case_study_02/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/out/production/Module2/case_study_02/controllers/Validate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module2/src/case_study_02/controllers/ValidateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../11.Cau_truc_lap/Bai_tap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../module3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,6 +58,7 @@
       <workItem from="1601790928170" duration="70000" />
       <workItem from="1602041117249" duration="761000" />
       <workItem from="1602079419913" duration="1412000" />
+      <workItem from="1603700209039" duration="343000" />
     </task>
     <servers />
   </component>
@@ -77,9 +66,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1597628812275">
+    <state x="601" y="192" key="FileChooserDialogImpl" timestamp="1603700552968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597628812275" />
+    <state x="601" y="192" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603700552968" />
   </component>
 </project>
